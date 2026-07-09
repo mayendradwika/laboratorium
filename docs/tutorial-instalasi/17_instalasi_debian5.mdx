@@ -1,0 +1,238 @@
+---
+sidebar_position: 17
+---
+
+# Instalasi Debian 5 di Oracle VM VirtualBox
+
+Debian 5 (Lenny) adalah distribusi Linux yang stabil dan cocok untuk pembelajaran sistem operasi, administrasi server, dan jaringan. Panduan ini akan membantu Anda menginstal Debian 5 menggunakan Oracle VM VirtualBox sebagai mesin virtual.
+
+:::info
+
+Oracle VM VirtualBox VirtualBox adalah software virtualisasi gratis yang memungkinkan Anda menjalankan sistem operasi lain di dalam Windows tanpa perlu partisi atau restart komputer.
+:::
+
+---
+
+## Persiapan
+
+### Yang Anda Perlukan
+
+1. **Oracle VM VirtualBox** sudah terinstal (download dari [virtualbox.org](https://www.virtualbox.org/))
+2. **File ISO Debian 5** (debian-504-i386.iso atau sejenisnya)
+3. **RAM minimal 512 MB** untuk VM (1 GB disarankan)
+4. **Storage minimal 8 GB** untuk virtual disk
+
+---
+
+## Tahap 1: Membuat Virtual Machine Baru
+
+### 1. Buka Oracle VM VirtualBox
+
+- Jalankan aplikasi **Oracle VM VirtualBox** dari Start Menu atau Desktop
+- Klik tombol **New** di toolbar atas untuk membuat VM baru
+
+### 2. Beri Nama VM
+
+- Di dialog **Create Virtual Machine**, masukkan nama VM: **debian 5** (atau **Debian5**)
+- **Type:** Pilih **Linux**
+- **Version:** Pilih **Debian (32-bit)** atau **Debian (64-bit)** sesuai file ISO
+- Klik **Next**
+
+### 3. Alokasi Memory (RAM)
+
+- Pilih jumlah RAM untuk VM (disarankan **1024 MB** atau minimal **512 MB**)
+- Jangan alokasikan lebih dari setengah RAM komputer host
+- Klik **Next**
+
+### 4. Create Virtual Hard Disk
+
+- Pilih **Create a virtual hard disk now**
+- Klik **Create**
+
+### 5. Hard Disk File Type
+
+- Pilih **VDI (VirtualBox Disk Image)**
+- Klik **Next**
+
+### 6. Storage Type
+
+- Pilih **Dynamically allocated** (disk virtual akan membesar sesuai kebutuhan, lebih hemat space)
+- Klik **Next**
+
+### 7. Ukuran Disk dan Lokasi
+
+- Biarkan lokasi default atau ubah sesuai keinginan
+- Ukuran disk: **8 GB** hingga **20 GB** (8 GB cukup untuk instalasi minimal)
+- Klik **Create**
+
+Virtual machine **debian 5** kini sudah dibuat dan akan muncul di daftar VM.
+
+---
+
+## Tahap 2: Memasukkan File ISO dan Start VM
+
+### 1. Start Virtual Machine
+
+- Pilih VM **debian 5** dari daftar
+- Klik tombol **Start** (ikon panah hijau)
+
+### 2. Select Start-up Disk
+
+- Pada pertama kali start, VirtualBox akan meminta file ISO untuk boot
+- Klik ikon folder untuk browse file
+- Cari dan pilih file **debian-504-i386.iso**
+- Klik **Start**
+
+VM akan boot dari ISO Debian dan masuk ke installer.
+
+---
+
+## Tahap 3: Proses Instalasi Debian 5
+
+### 1. Boot Menu
+
+- Pada menu boot Debian, pilih **Install** (bukan Graphical Install)
+- Tekan **Enter**
+
+### 2. Pilih Bahasa dan Lokasi
+
+- **Language:** Pilih **English** (atau bahasa pilihan)
+- **Country:** Pilih lokasi sesuai timezone
+- **Keyboard:** Pilih **American English** atau sesuai keyboard Anda
+
+### 3. Pertanyaan: Detect Disks? → YES
+
+- Installer akan bertanya apakah ingin mendeteksi disk otomatis
+- Pilih **Yes** atau tekan **Enter**
+
+### 4. Pertanyaan: Load CD-ROM Drivers from Removable Media (DVD)? → NO
+
+- Debian akan bertanya apakah perlu load driver dari media eksternal
+- Pilih **No** (karena kita sudah boot dari ISO)
+
+### 5. Pertanyaan: Use Network Mirror? → NO
+
+- Debian bertanya apakah ingin menggunakan mirror online untuk download package
+- Pilih **No** (untuk instalasi offline lebih cepat)
+- Anda bisa configure repository nanti setelah instalasi selesai
+
+### 6. Set Root Password
+
+- Masukkan password untuk user **root** (superuser/administrator)
+- Password: **debian5** (atau password pilihan Anda)
+- Konfirmasi dengan mengetik ulang password yang sama
+
+:::tip
+
+Catat Password Root password sangat penting untuk administrasi sistem. Pastikan Anda mengingatnya atau mencatatnya.
+:::
+
+### 7. Buat User Biasa
+
+- **Full name:** Ketik **debian** (atau nama lengkap user)
+- **Username:** Ketik **debian** (atau username pilihan)
+- **Password:** Buat password untuk user biasa (bisa sama atau berbeda dengan root)
+
+### 8. Partisi Disk
+
+- Pilih **Guided - use entire disk** (cara paling mudah)
+- Pilih disk virtual yang tersedia (hanya ada satu: **VBOX HARDDISK**)
+- Pilih **All files in one partition**
+- Pilih **Finish partitioning and write changes to disk**
+
+### 9. Pertanyaan: Write Changes to Disk? → YES
+
+- Debian akan bertanya konfirmasi untuk menulis partisi
+- Pilih **Yes** untuk melanjutkan
+
+Proses instalasi base system akan dimulai (tunggu beberapa menit).
+
+### 10. Pertanyaan: Participate in Package Usage Survey? → NO
+
+- Debian bertanya apakah ingin ikut survey penggunaan package
+- Pilih **No** (opsional, terserah Anda)
+
+### 11. Software Selection
+
+- Anda akan diminta memilih software yang akan diinstal
+- Untuk instalasi minimal, biarkan default atau hapus semua centang
+- Tekan **Continue**
+
+### 12. Install GRUB Bootloader
+
+- Pilih **Yes** untuk install GRUB ke Master Boot Record
+- Instalasi akan selesai
+
+### 13. Finish Installation
+
+- Klik **Continue** untuk restart VM
+- Lepaskan ISO dengan cara: **Devices → Optical Drives → Remove disk from virtual drive**
+
+---
+
+## Tahap 4: Mengatasi Error dan Restart
+
+### Jika Muncul Error Saat Boot Pertama
+
+Jika Debian gagal boot setelah instalasi:
+
+1. **Power Off** VM (klik **Machine → Power Off**, pilih **Power Off**)
+2. Klik **Close** untuk menutup window VM
+3. Di VirtualBox Manager, pilih VM **debian 5**
+4. Klik **Start** lagi
+
+### Login Pertama Kali
+
+- **Hostname login:** Ketik username **debian** (atau user yang Anda buat)
+- **Password:** Masukkan password user
+- Tekan **Enter**
+
+Anda kini sudah masuk ke sistem Debian 5!
+
+---
+
+## Tips Penggunaan Debian 5 di VirtualBox
+
+### 1. Install Guest Additions (Opsional)
+
+Guest Additions meningkatkan performa dan integrasi VM dengan host:
+- Dari menu VM: **Devices → Insert Guest Additions CD image**
+- Mount dan install di Debian
+
+### 2. Snapshot VM
+
+Buat snapshot setelah instalasi selesai untuk backup:
+- **Machine → Take Snapshot**
+- Beri nama: "Fresh Install"
+
+### 3. Perintah Dasar Debian/Linux
+
+Beberapa perintah berguna:
+```bash
+su              # Ganti ke root user
+apt-get update  # Update repository
+apt-get install <package>  # Install software
+shutdown -h now # Shutdown system
+reboot          # Restart system
+```
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| VM tidak bisa start | File ISO tidak dimount | Mount ulang file ISO dari Settings → Storage |
+| Keyboard tidak cocok | Layout keyboard salah | Pilih layout yang tepat saat instalasi |
+| Network tidak berfungsi | Network adapter tidak enabled | Settings → Network → Enable Network Adapter |
+| VM sangat lambat | RAM terlalu sedikit | Tambah alokasi RAM di Settings → System |
+| Error "VT-x not available" | Virtualization disabled di BIOS | Enable VT-x/AMD-V di BIOS komputer |
+
+---
+
+> **Catatan untuk Asisten Laboratorium:**
+> Siapkan file ISO Debian di server lab agar mudah diakses mahasiswa. Pastikan virtualization (VT-x/AMD-V) sudah enabled di BIOS semua komputer lab. Buat VM template Debian yang sudah terinstall dan siap di-clone untuk mempercepat praktikum. Untuk praktikum jaringan, configure network adapter ke Bridge Mode agar VM bisa berkomunikasi antar komputer.
+
+---
+
+**Selesai!** Debian 5 kini berjalan di VirtualBox dan siap untuk praktikum sistem operasi Linux.

@@ -1,0 +1,197 @@
+---
+sidebar_position: 16
+---
+
+# Cara Membuat Bootable Windows 10 untuk Instalasi Ulang
+
+Panduan ini adalah tutorial khusus untuk membuat bootable USB Windows 10 yang siap digunakan untuk instalasi ulang sistem operasi. Tutorial ini melengkapi tutorial **Bootable USB dengan Rufus** (tutorial sebelumnya) dengan fokus pada workflow praktis untuk Windows 10.
+
+:::tip
+
+Sudah Baca Tutorial Rufus? Untuk penjelasan lengkap tentang MBR/GPT dan detail teknis Rufus, baca tutorial **"Cara Membuat Bootable USB dengan Rufus"** terlebih dahulu. Tutorial ini fokus pada langkah praktis untuk Windows 10.
+:::
+
+---
+
+## Yang Anda Perlukan
+
+1. **Flashdisk kosong** minimal 8 GB untuk dijadikan bootable USB
+2. **Flashdisk kedua** yang sudah berisi:
+   - File ISO Windows 10 (atau Windows 11)
+   - File **rufus.exe** (aplikasi Rufus)
+3. Informasi tipe partisi komputer target (**MBR** atau **GPT**)
+
+:::info
+
+Download File Jika belum punya file ISO Windows 10, download dari [microsoft.com/software-download/windows10](https://www.microsoft.com/software-download/windows10) menggunakan Media Creation Tool.
+:::
+
+---
+
+## Langkah Pertama: Persiapan Flashdisk
+
+### 1. Masukkan Flashdisk Kosong
+
+- Colokkan **flashdisk kosong** (minimal 8 GB) ke port USB komputer
+- Flashdisk ini akan dijadikan bootable USB untuk instalasi Windows 10
+- Pastikan tidak ada data penting karena akan dihapus total
+
+:::warning
+
+Backup Data Semua data di flashdisk akan dihapus permanen saat proses pembuatan bootable. Backup terlebih dahulu jika ada file penting.
+:::
+
+### 2. Masukkan Flashdisk Berisi ISO dan Rufus
+
+- Colokkan **flashdisk kedua** yang sudah berisi file **ISO Windows 10** dan **rufus.exe**
+- Buka flashdisk tersebut di File Explorer
+- Pastikan file ISO dan Rufus ada dan tidak corrupt
+
+---
+
+## Langkah Kedua: Membuat Bootable dengan Rufus
+
+### 1. Jalankan Rufus
+
+- Dari flashdisk yang berisi file, buka dan jalankan **rufus.exe**
+- Jika muncul dialog **User Account Control**, klik **Yes**
+- Jika ada notifikasi update, klik **No** untuk skip
+
+### 2. Tampilan Rufus Sudah Masuk ke Select
+
+Ketika Rufus terbuka, Anda akan langsung melihat tampilan utama dengan beberapa bagian:
+- **Device** - Untuk memilih flashdisk target
+- **Boot selection** - Untuk memilih file ISO
+- **Partition scheme** - Untuk memilih MBR atau GPT
+- **Volume label** - Untuk memberi nama flashdisk
+
+### 3. Device dan Boot Selection (Tidak Perlu Diubah)
+
+**Device:**
+- Secara otomatis akan mendeteksi flashdisk kosong yang terpasang
+- Jika ada lebih dari satu flashdisk, pastikan memilih yang benar (cek kapasitas dan drive letter)
+- **Jangan ubah** setting ini jika sudah benar
+
+**Boot selection:**
+- Akan menunjukkan "Non bootable" atau "Disk or ISO image"
+- Kita perlu memilih file ISO di langkah berikutnya
+
+### 4. Klik SELECT dan Ambil Windows 10 ISO
+
+- Klik tombol **SELECT** di sebelah kanan **Boot selection**
+- Jendela file browser akan terbuka
+- Navigasi ke flashdisk kedua yang berisi file ISO
+- Pilih file **Windows 10 ISO** (misalnya: `Win10_21H2_x64.iso`)
+  - Jika ingin membuat bootable Windows 11, pilih file ISO Windows 11
+- Klik **Open**
+
+Setelah file ISO dipilih, Rufus akan otomatis membaca isi ISO dan menampilkan informasi Windows version.
+
+### 5. Ubah Partition Scheme ke MBR atau GPT
+
+Bagian ini **sangat penting** dan harus disesuaikan dengan komputer target:
+
+**Jika komputer target menggunakan partisi GPT (UEFI modern):**
+- **Partition scheme:** Ubah ke **GPT**
+- **Target system:** Akan otomatis jadi **UEFI (non CSM)**
+
+**Jika komputer target menggunakan partisi MBR (BIOS lama):**
+- **Partition scheme:** Ubah ke **MBR**
+- **Target system:** Akan otomatis jadi **BIOS or UEFI**
+
+:::tip
+
+Cara Mengetahui Tipe Partisi Lihat tutorial **"Cara Membuat Bootable USB dengan Rufus"** bagian "Cek Tipe Partisi" untuk cara mengecek apakah komputer target menggunakan MBR atau GPT melalui Disk Management.
+:::
+
+### 6. Volume Label (Opsional)
+
+- **Volume label** adalah nama yang akan muncul untuk flashdisk bootable ini
+- **Boleh diubah** menjadi nama yang mudah diingat, contoh:
+  - `Windows10_Install`
+  - `Win10_Bootable`
+  - `InstallUSB`
+- **Boleh tidak diubah** dan biarkan default
+- Fungsinya hanya untuk identifikasi, tidak mempengaruhi proses booting
+
+### 7. Setting Lain Biarkan Default
+
+- **File system:** Biarkan default (biasanya FAT32 atau NTFS)
+- **Cluster size:** Biarkan default
+- Jangan ubah setting advanced kecuali Anda tahu fungsinya
+
+### 8. Klik START
+
+- Setelah semua setting sudah benar, klik tombol besar **START** di bagian bawah
+- Akan muncul **warning** bahwa semua data akan dihapus
+- Klik **OK** untuk melanjutkan
+- Jika muncul pilihan **ISO mode** atau **DD mode**, pilih **ISO Image mode**
+
+### 9. Tunggu Proses Selesai
+
+- Rufus akan mulai membuat bootable USB
+- Progress bar akan menunjukkan status:
+  - Formatting
+  - Copying ISO files
+  - Finalizing
+- Proses biasanya **5-20 menit** tergantung:
+  - Ukuran file ISO (Windows 10 sekitar 4-6 GB)
+  - Kecepatan flashdisk (USB 3.0 lebih cepat dari USB 2.0)
+  - Kecepatan komputer
+
+:::info
+
+Jangan Cabut Flashdisk Selama proses berjalan, jangan cabut flashdisk atau matikan komputer. Tunggu hingga status menunjukkan **READY**.
+:::
+
+### 10. Selesai
+
+- Ketika status bar menunjukkan **READY**, bootable USB Windows 10 sudah jadi
+- Klik **CLOSE** untuk menutup Rufus
+- Sebelum mencabut flashdisk, klik ikon **Safely Remove Hardware** di system tray
+- Pilih flashdisk bootable dan klik **Eject**
+- Setelah notifikasi "Safe to remove", cabut flashdisk
+
+---
+
+## Menggunakan Bootable USB
+
+Setelah bootable USB selesai dibuat, Anda bisa langsung menggunakannya untuk instalasi ulang Windows 10:
+
+1. **Masukkan** bootable USB ke komputer yang akan diinstal ulang
+2. **Restart** komputer
+3. **Tekan F12** (atau F9/F8/Esc tergantung merk) saat komputer menyala untuk masuk Boot Menu
+4. **Pilih** USB drive dari menu boot
+5. **Ikuti** proses instalasi Windows 10
+
+Untuk panduan lengkap instalasi Windows 10, lihat tutorial **"Instalasi Ulang Windows 10"**.
+
+---
+
+## Troubleshooting Cepat
+
+| Masalah | Solusi Cepat |
+|---|---|
+| Rufus tidak detect flashdisk | Cabut dan colok ulang flashdisk, atau coba port USB lain |
+| Error "Access denied" | Jalankan Rufus sebagai Administrator (klik kanan → Run as administrator) |
+| Bootable USB tidak bisa boot | Cek partition scheme (MBR/GPT) sudah sesuai dengan komputer target |
+| Proses sangat lambat | Gunakan flashdisk USB 3.0 dan port USB 3.0 (biasanya berwarna biru) |
+
+---
+
+## Tips Penting
+
+1. **Gunakan flashdisk USB 3.0** untuk kecepatan maksimal (bisa 3-5x lebih cepat dari USB 2.0)
+2. **Label flashdisk** dengan stiker fisik agar mudah diidentifikasi (tulis "Win10 GPT" atau "Win10 MBR")
+3. **Simpan file ISO** di hard disk atau server lab untuk membuat bootable baru kapan saja
+4. **Buat dua versi** bootable: satu untuk MBR dan satu untuk GPT agar siap untuk semua jenis komputer
+5. **Test bootable USB** di komputer target sebelum digunakan untuk instalasi massal
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Siapkan minimal 2-3 bootable USB Windows 10 (MBR dan GPT) yang sudah siap pakai di lab. Beri label jelas untuk membedakan. Simpan file ISO Windows 10 terbaru di server lab agar semua teknisi bisa membuat bootable baru dengan mudah. Untuk instalasi massal, pertimbangkan menggunakan solusi network boot atau disk cloning.
+
+---
+
+**Selesai!** Bootable USB Windows 10 siap digunakan untuk instalasi ulang sistem operasi.

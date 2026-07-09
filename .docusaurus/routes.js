@@ -78,6 +78,11 @@ export default [
     exact: true
   },
   {
+    path: '/docs/blog/team/fabillah',
+    component: ComponentCreator('/docs/blog/team/fabillah', 'cde'),
+    exact: true
+  },
+  {
     path: '/docs/blog/team/hanatasya',
     component: ComponentCreator('/docs/blog/team/hanatasya', '79c'),
     exact: true
@@ -99,15 +104,15 @@ export default [
   },
   {
     path: '/docs/docs',
-    component: ComponentCreator('/docs/docs', 'e40'),
+    component: ComponentCreator('/docs/docs', '0da'),
     routes: [
       {
         path: '/docs/docs',
-        component: ComponentCreator('/docs/docs', 'cb1'),
+        component: ComponentCreator('/docs/docs', '20f'),
         routes: [
           {
             path: '/docs/docs',
-            component: ComponentCreator('/docs/docs', 'fd1'),
+            component: ComponentCreator('/docs/docs', 'ac9'),
             routes: [
               {
                 path: '/docs/docs/category/standar-operasional-labor',
@@ -140,8 +145,134 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/docs/tutorial-instalasi/aktivasi_office',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/aktivasi_office', 'cd0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/aktivasi_windows',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/aktivasi_windows', '2d0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/blokir_firewall',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/blokir_firewall', '529'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/bootable_rufus',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/bootable_rufus', '119'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/bootable_windows10',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/bootable_windows10', 'f75'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/cek_aktivasi',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/cek_aktivasi', '4df'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/connect_mendeley_word',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/connect_mendeley_word', '082'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/flashdisk_cloning',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/flashdisk_cloning', '784'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_accurate5',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_accurate5', 'f3f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_animate',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_animate', 'b6f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_borland_cpp',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_borland_cpp', '88d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_coreldraw',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_coreldraw', 'fb6'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_debian5',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_debian5', '239'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_eviews',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_eviews', '0dd'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_flash_cs3',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_flash_cs3', 'a52'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/docs/tutorial-instalasi/instalasi_flutter',
                 component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_flutter', '80b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_matlab',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_matlab', 'b3c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_office_access',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_office_access', '41a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_photoshop_cs6',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_photoshop_cs6', '56f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_smartpls',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_smartpls', '843'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_spss',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_spss', '954'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/instalasi_ulang_windows',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_ulang_windows', '1a9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -154,6 +285,12 @@ export default [
               {
                 path: '/docs/docs/tutorial-instalasi/instalasi_xampp',
                 component: ComponentCreator('/docs/docs/tutorial-instalasi/instalasi_xampp', '253'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/docs/tutorial-instalasi/perbaiki_xampp',
+                component: ComponentCreator('/docs/docs/tutorial-instalasi/perbaiki_xampp', '77b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

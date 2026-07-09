@@ -1,0 +1,266 @@
+---
+sidebar_position: 6
+---
+
+# Menghubungkan Mendeley dengan Microsoft Word
+
+Mendeley adalah perangkat lunak manajemen referensi (*reference manager*) yang sangat populer di kalangan akademisi, peneliti, dan mahasiswa. Salah satu fitur unggulannya adalah kemampuan untuk **mengintegrasikan langsung dengan Microsoft Word**, sehingga Anda dapat menyisipkan sitasi dan membuat daftar pustaka secara otomatis tanpa harus mengetik manual.
+
+Namun, terkadang plugin Mendeley tidak muncul di Microsoft Word meskipun aplikasi Mendeley sudah terpasang. Panduan ini akan membantu Anda mengatasi masalah tersebut dan memastikan koneksi antara Mendeley dan Word berfungsi dengan baik.
+
+:::info
+
+Persyaratan Pastikan Anda sudah menginstal: - **Mendeley Desktop** (versi terbaru dari [mendeley.com](https://www.mendeley.com/download-desktop-new/)) - **Microsoft Word** (2013, 2016, 2019, 2021, atau Microsoft 365) Kedua aplikasi harus terinstal di komputer yang sama.
+:::
+
+---
+
+## Gejala Masalah yang Umum Terjadi
+
+Berikut adalah beberapa tanda bahwa plugin Mendeley tidak terhubung dengan Word:
+
+- **Tab "References"** atau **"Mendeley"** tidak muncul di ribbon Microsoft Word
+- Tombol "Insert Citation" dan "Insert Bibliography" tidak tersedia
+- Muncul pesan error seperti *"Mendeley Cite-O-Matic is not installed"*
+- Plugin sempat ada, tapi tiba-tiba hilang setelah update Word atau Windows
+
+Jika Anda mengalami salah satu dari masalah di atas, ikuti langkah-langkah perbaikan berikut.
+
+---
+
+## Tahap 1: Install Plugin Word dari Mendeley Desktop
+
+Langkah pertama yang harus dilakukan adalah memastikan plugin Word sudah terinstal melalui aplikasi Mendeley Desktop.
+
+### 1. Buka Mendeley Desktop
+
+- Jalankan aplikasi **Mendeley Desktop** di komputer Anda.
+- Pastikan Anda sudah login dengan akun Mendeley (jika belum punya, daftar gratis di [mendeley.com](https://www.mendeley.com)).
+
+
+### 2. Masuk ke Menu Tools
+
+- Klik menu **Tools** di bagian atas jendela Mendeley Desktop.
+- Pilih **Install MS Word Plugin** dari menu dropdown.
+
+
+### 3. Tunggu Proses Instalasi
+
+- Mendeley akan secara otomatis mendeteksi versi Microsoft Word yang terpasang di komputer Anda.
+- Proses instalasi plugin biasanya hanya memakan waktu beberapa detik.
+- Jika berhasil, akan muncul notifikasi bahwa plugin telah terpasang.
+
+:::tip
+
+Restart Word Setelah Instalasi Setelah plugin terinstal, **tutup dan buka ulang Microsoft Word** untuk memastikan plugin dimuat dengan benar.
+:::
+
+---
+
+## Tahap 2: Memeriksa Status Add-ins di Microsoft Word
+
+Jika plugin Mendeley masih belum muncul setelah instalasi, ada kemungkinan add-in tersebut dalam kondisi **disabled** atau tidak aktif di Microsoft Word. Berikut cara mengaktifkannya kembali.
+
+### 1. Buka Microsoft Word
+
+- Jalankan aplikasi **Microsoft Word**.
+- Buka dokumen baru atau dokumen yang sudah ada.
+
+### 2. Masuk ke Menu File
+
+- Klik tab **File** di pojok kiri atas.
+- Pilih **Options** di bagian paling bawah menu sebelah kiri.
+
+
+### 3. Buka Pengaturan Add-ins
+
+- Jendela **Word Options** akan terbuka.
+- Di panel sebelah kiri, pilih **Add-ins**.
+
+
+### 4. Ubah Manage ke "Word Add-ins"
+
+- Di bagian bawah jendela, Anda akan melihat dropdown **Manage** yang secara default mungkin menampilkan pilihan "COM Add-ins" atau "Disabled Items".
+- Klik dropdown tersebut dan ubah menjadi **Word Add-ins**.
+- Klik tombol **Go...** di sebelahnya.
+
+
+:::info
+
+Perbedaan Jenis Add-ins - **Word Add-ins:** Plugin yang terintegrasi langsung dengan Word (format `.dotm`) - **COM Add-ins:** Plugin berbasis Component Object Model (format `.dll`) Mendeley menggunakan **Word Add-ins** untuk versi modern, jadi pastikan Anda memilih opsi yang tepat.
+:::
+
+### 5. Aktifkan Mendeley Add-in
+
+- Jendela **Templates and Add-ins** akan muncul.
+- Cari item bernama **Mendeley-[versi].dotm** (contoh: `Mendeley-1.19.8.dotm`) dalam daftar.
+- **Centang kotak** di sebelah kiri nama Mendeley jika belum tercentang.
+- Klik **OK** untuk menyimpan perubahan.
+
+
+### 6. Restart Microsoft Word
+
+- Tutup Microsoft Word sepenuhnya (pastikan tidak ada dokumen Word lain yang terbuka).
+- Buka kembali Microsoft Word.
+- Periksa apakah tab **References** atau **Mendeley** sudah muncul di ribbon dengan tombol-tombol seperti "Insert Citation" dan "Insert Bibliography".
+
+
+---
+
+## Tahap 3: Memeriksa COM Add-ins (Jika Masih Belum Muncul)
+
+Dalam beberapa kasus, plugin Mendeley mungkin terdaftar sebagai COM Add-in. Jika langkah sebelumnya tidak berhasil, coba periksa juga pengaturan COM Add-ins.
+
+### 1. Kembali ke Word Options → Add-ins
+
+- Buka **File → Options → Add-ins**.
+
+### 2. Ubah Manage ke "COM Add-ins"
+
+- Di bagian bawah, ubah dropdown **Manage** menjadi **COM Add-ins**.
+- Klik tombol **Go...**.
+
+
+### 3. Aktifkan Mendeley Cite-O-Matic (Jika Ada)
+
+- Jika Anda melihat item bernama **Mendeley Cite-O-Matic** dalam daftar, centang kotak di sebelahnya.
+- Klik **OK**.
+- Restart Microsoft Word.
+
+:::warning
+
+Add-in Terdisable Otomatis Jika add-in sering terdisable otomatis setiap kali Word dibuka, kemungkinan ada konflik dengan add-in lain atau file add-in corrupt. Coba reinstall Mendeley Desktop atau perbaiki instalasi Microsoft Office.
+:::
+
+---
+
+## Tahap 4: Solusi untuk Masalah Khusus
+
+Jika setelah mengikuti semua langkah di atas plugin Mendeley masih belum muncul, coba solusi tambahan berikut:
+
+### A. Install Ulang Plugin Mendeley
+
+1. Buka **Mendeley Desktop**.
+2. Klik **Tools → Uninstall MS Word Plugin** (jika ada).
+3. Tutup Mendeley dan Microsoft Word.
+4. Buka kembali Mendeley Desktop.
+5. Klik **Tools → Install MS Word Plugin**.
+6. Restart Word.
+
+### B. Periksa Lokasi File Template Mendeley
+
+File template Mendeley (`.dotm`) harus berada di folder Startup Word agar dimuat otomatis. Periksa lokasi berikut:
+
+```
+C:\Users\[NamaUser]\AppData\Roaming\Microsoft\Word\STARTUP
+```
+
+Pastikan ada file bernama `Mendeley-[versi].dotm` di folder tersebut. Jika tidak ada:
+
+1. Cari file `Mendeley-[versi].dotm` di folder instalasi Mendeley (biasanya di `C:\Program Files\Mendeley Desktop\wordPlugin\`).
+2. **Salin** file tersebut ke folder `STARTUP` Word di atas.
+3. Restart Word.
+
+
+### C. Nonaktifkan Add-in yang Berkonflik
+
+Beberapa add-in lain (seperti Grammarly, EndNote, atau Zotero) bisa menyebabkan konflik dengan Mendeley. Coba nonaktifkan sementara add-in lain untuk mengisolasi masalah.
+
+### D. Jalankan Word sebagai Administrator
+
+Klik kanan pada ikon Microsoft Word dan pilih **"Run as administrator"**. Beberapa komputer dengan pengaturan keamanan ketat memerlukan hak akses administrator agar add-in dapat dimuat.
+
+### E. Perbaiki Instalasi Microsoft Office
+
+Jika masalah tetap terjadi, kemungkinan ada kerusakan pada instalasi Office:
+
+1. Buka **Control Panel → Programs and Features**.
+2. Cari **Microsoft Office** dalam daftar.
+3. Klik kanan dan pilih **Change**.
+4. Pilih **Repair** (Quick Repair atau Online Repair).
+5. Tunggu proses selesai, lalu restart komputer.
+
+---
+
+## Tahap 5: Menguji Plugin Mendeley
+
+Setelah plugin berhasil muncul di Word, lakukan pengujian untuk memastikan fungsionalitasnya bekerja dengan baik.
+
+### 1. Buat Dokumen Baru di Word
+
+- Buka dokumen Word kosong.
+
+### 2. Sisipkan Sitasi
+
+- Klik tab **References** (atau tab **Mendeley** jika tersedia).
+- Klik tombol **Insert Citation**.
+- Jendela Mendeley akan muncul, memungkinkan Anda mencari dan memilih referensi dari library Mendeley Anda.
+- Pilih salah satu referensi dan klik **OK**.
+
+
+### 3. Sisipkan Daftar Pustaka
+
+- Letakkan kursor di bagian akhir dokumen.
+- Klik tombol **Insert Bibliography**.
+- Daftar pustaka akan muncul secara otomatis dengan format yang sudah ditentukan (APA, IEEE, Harvard, dll.).
+
+
+### 4. Ubah Citation Style (Opsional)
+
+- Klik tombol **Style** di ribbon Mendeley.
+- Pilih format sitasi yang diinginkan (misalnya APA 7th edition, IEEE, Vancouver, dll.).
+- Semua sitasi dan daftar pustaka akan otomatis berubah sesuai format yang dipilih.
+
+Jika semua langkah di atas berjalan lancar, selamat - **koneksi Mendeley dan Word Anda sudah berhasil!** 🎉
+
+---
+
+## Troubleshooting Umum
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Plugin Mendeley tidak muncul di Word | Add-in belum diaktifkan atau belum terinstal | Ikuti **Tahap 1** dan **Tahap 2** untuk instal dan aktifkan add-in |
+| Tab Mendeley hilang setelah update Windows/Office | Update menyebabkan add-in terdisable otomatis | Masuk ke **Word Options → Add-ins** dan aktifkan kembali Mendeley add-in |
+| Error "Mendeley Cite-O-Matic is not installed" | File template tidak ada di folder Startup | Salin manual file `Mendeley-[versi].dotm` ke folder Startup Word (lihat **Tahap 4B**) |
+| Insert Citation tidak berfungsi (tidak ada respons) | Mendeley Desktop tidak berjalan di background | Pastikan Mendeley Desktop sedang berjalan saat menggunakan plugin di Word |
+| Daftar pustaka tidak muncul atau format salah | Citation style belum dipilih atau library kosong | Pilih citation style dari menu **Style** dan pastikan ada referensi di library Mendeley |
+| Konflik dengan EndNote atau Zotero | Beberapa reference manager tidak bisa berjalan bersamaan | Nonaktifkan add-in EndNote/Zotero saat menggunakan Mendeley |
+
+---
+
+## Tips Penggunaan Mendeley di Microsoft Word
+
+Berikut beberapa tips untuk memaksimalkan penggunaan Mendeley dalam penulisan akademik:
+
+### 1. Sinkronisasi Library Mendeley
+
+- Pastikan library Mendeley Anda sudah tersinkronisasi dengan akun cloud Mendeley.
+- Klik **Sync** di Mendeley Desktop sebelum mulai menulis untuk memastikan semua referensi terbaru tersedia.
+
+### 2. Gunakan Shortcut Keyboard
+
+- **Alt + 1:** Insert Citation
+- **Alt + 2:** Insert Bibliography
+- **Alt + 3:** Refresh
+
+Shortcut ini mempercepat proses penulisan tanpa harus klik tombol di ribbon.
+
+### 3. Edit Citation In-Text
+
+- Klik pada sitasi yang sudah disisipkan di dokumen.
+- Tekan tombol **Edit Citation** untuk menambahkan nomor halaman atau catatan tambahan.
+
+### 4. Backup Dokumen Secara Berkala
+
+- Mendeley menyimpan data sitasi dalam field code Word.
+- Selalu simpan backup dokumen secara terpisah untuk menghindari kehilangan data jika terjadi error.
+
+---
+
+> **Catatan untuk Mahasiswa dan Peneliti:**
+> Gunakan Mendeley sejak awal penulisan skripsi, tesis, atau paper penelitian Anda. Menambahkan sitasi secara manual di akhir proses penulisan sangat memakan waktu dan rentan kesalahan. Dengan Mendeley, Anda bisa fokus pada konten tulisan sementara formatting referensi dilakukan otomatis oleh sistem.
+
+---
+
+> **Catatan untuk Asisten Laboratorium:**
+> Pastikan Mendeley Desktop dan Microsoft Word sudah terinstal dan terhubung dengan baik di semua komputer laboratorium sebelum praktikum penulisan ilmiah dimulai. Lakukan pengecekan rutin dan sediakan panduan troubleshooting di setiap meja praktikum untuk mempercepat penyelesaian masalah teknis.

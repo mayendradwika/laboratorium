@@ -1,0 +1,249 @@
+---
+sidebar_position: 23
+---
+
+# Instalasi EViews 10
+
+EViews (Econometric Views) adalah software untuk analisis ekonometri, forecasting, dan analisis data time series. Software ini banyak digunakan oleh ekonom, peneliti, dan praktisi keuangan untuk modeling ekonomi dan statistik.
+
+Panduan ini akan membantu Anda menginstal EViews 10 dengan aktivasi menggunakan patch.
+
+:::warning
+
+Disclaimer Legal Tutorial ini untuk tujuan edukasi di lingkungan akademis. Untuk penggunaan profesional atau penelitian yang dipublikasikan, beli lisensi resmi dari IHS Markit.
+:::
+
+---
+
+## Persiapan
+
+### Matikan Antivirus
+
+Antivirus akan mendeteksi patch sebagai ancaman dan menghapusnya.
+
+**Nonaktifkan Windows Defender:**
+1. Buka **Windows Security** → **Virus & threat protection**
+2. **Manage settings** → Nonaktifkan **Real-time protection**
+
+---
+
+## Tahap 1: Extract File Installer
+
+### 1. Lokasi File
+
+Buka Master Software di drive D atau lokasi penyimpanan software lab:
+```
+D:\Master Software\EViews 10
+```
+
+### 2. Extract dengan Password
+
+File EViews biasanya dalam format terkompresi dengan password.
+
+- Klik kanan pada file EViews 10 (`.rar` atau `.zip`)
+- Pilih **Extract Here** atau **Extract All**
+- Jika diminta password, masukkan: **www.masterkreatif.com** atau **input demo**
+- Tekan **OK**
+- Tunggu proses ekstraksi selesai
+
+:::info
+
+Password Umum Password yang sering digunakan untuk file dari Master Software: - `www.masterkreatif.com` - `www.yasir252.com` - `kuyhaa` - `input demo`
+:::
+
+### 3. Buka Folder Hasil Ekstraksi
+
+Setelah ekstraksi selesai, buka folder **EViews 10**.
+
+---
+
+## Tahap 2: Jalankan Installer
+
+### 1. Masuk ke Folder x64
+
+Di dalam folder EViews 10, cari dan buka subfolder:
+- **x64** (untuk Windows 64-bit)
+- Jika komputer 32-bit, pilih folder **x86**
+
+### 2. Jalankan EViews 10 Installer
+
+Di dalam folder x64, cari file:
+- **EViews 10 Installer.exe**
+- Atau **setup.exe**
+
+Klik kanan → **Run as administrator**
+
+### 3. Wizard Instalasi
+
+Installer EViews akan terbuka:
+
+**Language Selection:**
+- Pilih bahasa (biasanya English)
+- Klik **OK**
+
+**Welcome Screen:**
+- Klik **Next**
+
+**License Agreement:**
+- Pilih **Yes, I accept** atau centang "I accept the terms..."
+- Klik **Next**
+
+**Installation Path:**
+- Biarkan lokasi default:
+  ```
+  C:\Program Files (x86)\EViews 10
+  ```
+- Klik **Next**
+
+**Ready to Install:**
+- Klik **Install**
+- Tunggu proses instalasi selesai (3-10 menit)
+
+**Finish:**
+- **Jangan centang** "Launch EViews" jika ada opsi
+- Klik **Finish**
+
+---
+
+## Tahap 3: Apply Patch
+
+### 1. Cari Folder Patch
+
+Kembali ke folder ekstraksi EViews 10 (di luar folder x64).
+
+Cari folder bernama:
+- **Patch**
+- **Crack**
+- Atau file patch langsung di folder utama
+
+### 2. Copy File Patch
+
+Di dalam folder Patch, cari file:
+- **patch.exe**
+- Atau **EViews10_patch.exe**
+- Atau file dengan nama serupa
+
+Klik kanan → **Copy** (`Ctrl + C`)
+
+### 3. Paste ke Folder Instalasi EViews
+
+Navigasi ke folder instalasi EViews:
+```
+C:\Program Files (x86)\EViews 10
+```
+
+- Klik kanan di area kosong → **Paste** (`Ctrl + V`)
+- Jika muncul dialog permission, klik **Continue** atau **Yes**
+
+### 4. Jalankan Patch
+
+- Klik kanan pada file **patch.exe** yang sudah dipaste
+- Pilih **Run as administrator**
+- Jendela patch akan terbuka
+
+### 5. Klik Patch Button
+
+Di jendela patch:
+- Klik tombol **Patch** atau **Apply Patch**
+- Tunggu beberapa detik
+- Akan muncul pesan **"Patching successful"** atau **"Done"**
+- Klik **OK** atau **Close**
+
+---
+
+## Tahap 4: Verifikasi Instalasi
+
+### 1. Buka EViews 10
+
+- Cari **EViews 10** dari Start Menu
+- Klik untuk membuka aplikasi
+
+### 2. Cek Status Lisensi
+
+Jika patch berhasil:
+- EViews akan terbuka tanpa meminta lisensi atau aktivasi
+- Tidak ada notifikasi trial atau demo
+
+Jika masih muncul pesan trial:
+- Ulangi proses patch dengan run as administrator
+- Pastikan file patch di-paste ke folder instalasi yang benar
+
+### 3. Test Fungsionalitas
+
+Coba buat workfile baru:
+- **File → New → Workfile**
+- Pilih frequency (Annual, Quarterly, dll.)
+- Isi range tahun
+- Klik **OK**
+
+Jika workfile berhasil dibuat, instalasi berhasil.
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Password ekstrak salah | Password tidak sesuai | Coba password lain: `www.masterkreatif.com`, `kuyhaa`, atau `input demo` |
+| Patch tidak bisa dijalankan | Diblokir antivirus | Matikan antivirus dan copy ulang file patch |
+| EViews masih trial mode | Patch tidak diterapkan dengan benar | Jalankan patch sebagai Administrator di folder instalasi yang tepat |
+| Error "Missing DLL" | File instalasi tidak lengkap | Reinstall EViews atau install Visual C++ Redistributable |
+| EViews crash saat dibuka | Konflik dengan software lain | Restart komputer dan buka EViews lagi |
+
+---
+
+## Tips Penggunaan EViews
+
+### 1. Import Data
+
+EViews mendukung berbagai format data:
+- **Excel** (.xls, .xlsx)
+- **CSV** (.csv)
+- **Text** (.txt)
+- **SPSS** (.sav)
+
+Import via: **File → Import → Read Text-Lotus-Excel**
+
+### 2. Analisis Time Series
+
+Fungsi umum:
+- **Quick → Estimate Equation** - Regresi
+- **View → Graph** - Visualisasi data
+- **Procs → Unit Root Test** - Uji stasioneritas
+- **Quick → Generate Series** - Buat variabel baru
+
+### 3. Perintah Command Line
+
+EViews juga bisa digunakan via command line untuk otomasi:
+```
+equation eq1.ls y c x1 x2
+eq1.makeresid resid01
+```
+
+### 4. Export Hasil
+
+Export hasil analisis:
+- **File → Export** untuk data
+- **Object → Copy** untuk tabel/grafik
+- Paste ke Word/Excel untuk laporan
+
+---
+
+## Kegunaan EViews
+
+| Analisis | Fungsi |
+|---|---|
+| **Regression** | OLS, 2SLS, GMM |
+| **Time Series** | ARIMA, GARCH, VAR |
+| **Panel Data** | Fixed Effect, Random Effect |
+| **Forecasting** | Exponential Smoothing, ARIMA |
+| **Unit Root Test** | ADF, PP, KPSS |
+
+---
+
+> **Catatan untuk Asisten Laboratorium:**
+> Pastikan EViews 10 sudah terinstal dan ter-patch di semua komputer lab ekonometri. Siapkan contoh dataset time series untuk praktikum. Backup installer dan patch di server lab. Untuk publikasi jurnal internasional, ajukan pembelian lisensi akademik dari IHS Markit yang lebih terjangkau untuk institusi pendidikan.
+
+---
+
+**Selesai!** EViews 10 kini siap digunakan untuk analisis ekonometri dan forecasting.

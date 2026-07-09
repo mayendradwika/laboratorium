@@ -131,6 +131,18 @@
     "sidebar": "sidebar---docs-blog-814-2a0",
     "__props": "__props---docs-blog-team-500-ebe"
   },
+  "/docs/blog/team/fabillah-cde": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---docs-blog-selamat-datangace-5d6"
+      },
+      "plugin": "plugin---docs-blog-369-9db"
+    },
+    "items": [],
+    "sidebar": "sidebar---docs-blog-814-2a0",
+    "__props": "__props---docs-blog-team-fabillahe-5-a-202"
+  },
   "/docs/blog/team/hanatasya-79c": {
     "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
     "__context": {
@@ -172,17 +184,17 @@
       "plugin": "plugin---docs-search-138-773"
     }
   },
-  "/docs/docs-e40": {
+  "/docs/docs-0da": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-docsaba-31e"
     }
   },
-  "/docs/docs-cb1": {
+  "/docs/docs-20f": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-docsa-20-f19"
   },
-  "/docs/docs-fd1": {
+  "/docs/docs-ac9": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/docs/category/standar-operasional-labor-9af": {
@@ -205,9 +217,93 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-docs-sop-cara-upload-210-f-f19"
   },
+  "/docs/docs/tutorial-instalasi/aktivasi_office-cd0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-aktivasi-office-672-646"
+  },
+  "/docs/docs/tutorial-instalasi/aktivasi_windows-2d0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-aktivasi-windows-593-707"
+  },
+  "/docs/docs/tutorial-instalasi/blokir_firewall-529": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-blokir-firewall-66-d-c19"
+  },
+  "/docs/docs/tutorial-instalasi/bootable_rufus-119": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-bootable-rufus-98-b-5cc"
+  },
+  "/docs/docs/tutorial-instalasi/bootable_windows10-f75": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-bootable-windows-10801-7e3"
+  },
+  "/docs/docs/tutorial-instalasi/cek_aktivasi-4df": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-cek-aktivasif-36-e5f"
+  },
+  "/docs/docs/tutorial-instalasi/connect_mendeley_word-082": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-connect-mendeley-wordca-5-d03"
+  },
+  "/docs/docs/tutorial-instalasi/flashdisk_cloning-784": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-flashdisk-cloning-08-e-9cd"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_accurate5-f3f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-accurate-5-b-69-83d"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_animate-b6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-animate-893-3df"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_borland_cpp-88d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-borland-cpp-86-d-add"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_coreldraw-fb6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-coreldraw-3-f-1-a2d"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_debian5-239": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-debian-5302-454"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_eviews-0dd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-eviews-128-f6e"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_flash_cs3-a52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-flash-cs-3045-e5b"
+  },
   "/docs/docs/tutorial-instalasi/instalasi_flutter-80b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-docs-tutorial-instalasi-instalasi-flutter-830-980"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_matlab-b3c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-matlab-409-5ac"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_office_access-41a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-office-access-521-9b7"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_photoshop_cs6-56f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-photoshop-cs-647-d-79e"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_smartpls-843": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-smartpls-2-f-5-c97"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_spss-954": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-spss-82-d-440"
+  },
+  "/docs/docs/tutorial-instalasi/instalasi_ulang_windows-1a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-instalasi-ulang-windows-53-d-898"
   },
   "/docs/docs/tutorial-instalasi/instalasi_vscode-2e5": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -216,6 +312,10 @@
   "/docs/docs/tutorial-instalasi/instalasi_xampp-253": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-docs-tutorial-instalasi-instalasi-xamppdef-727"
+  },
+  "/docs/docs/tutorial-instalasi/perbaiki_xampp-77b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-docs-tutorial-instalasi-perbaiki-xamppaeb-a04"
   },
   "/docs/-6fa": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",

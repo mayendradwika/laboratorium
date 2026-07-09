@@ -1,0 +1,137 @@
+---
+sidebar_position: 4
+---
+
+# Instalasi Borland C++
+
+Borland C++ adalah *Integrated Development Environment* (IDE) klasik yang masih banyak digunakan untuk pembelajaran pemrograman berbasis C dan C++ tingkat dasar. Meskipun tergolong perangkat lunak lawas, Borland C++ tetap menjadi pilihan di beberapa institusi pendidikan karena kesederhanaannya dalam mengajarkan konsep fundamental pemrograman prosedural dan berorientasi objek.
+
+Panduan berikut akan membantu Anda memasang Borland C++ di komputer dengan sistem operasi Windows secara lengkap dan mudah dipahami.
+
+:::info
+
+Perlu Diketahui Borland C++ dirancang untuk sistem operasi Windows versi lama (Windows 98/XP/7). Pada Windows 10 dan 11, perangkat lunak ini masih dapat dijalankan melalui **mode kompatibilitas**, namun beberapa fitur mungkin tidak berfungsi optimal. Untuk pengalaman terbaik, pertimbangkan menggunakan IDE modern seperti **Code::Blocks** atau **Dev-C++** yang lebih kompatibel dengan sistem operasi terkini.
+:::
+
+---
+
+## Tahap 1: Persiapan File Installer
+
+Sebelum memulai instalasi, pastikan Anda sudah memiliki *file installer* Borland C++ (biasanya berupa folder yang berisi **Setup.exe** atau file arsip `.zip`/`.rar`).
+
+1. Jika *file* masih dalam bentuk arsip terkompresi, **ekstrak** terlebih dahulu ke lokasi yang mudah diakses (misalnya Desktop atau folder Downloads).
+2. Buka folder hasil ekstraksi dan pastikan terdapat file bernama **Setup.exe**.
+
+:::warning
+
+Nonaktifkan Antivirus Sementara Beberapa program antivirus mungkin mendeteksi installer Borland C++ sebagai ancaman karena usianya yang sudah tua dan tidak memiliki sertifikat digital modern. Jika proses instalasi terhambat, **nonaktifkan sementara** antivirus Anda selama proses pemasangan berlangsung, lalu aktifkan kembali setelah selesai.
+:::
+
+---
+
+## Tahap 2: Menjalankan Proses Instalasi
+
+Setelah file installer siap, ikuti langkah-langkah berikut untuk memasang Borland C++ ke komputer Anda:
+
+### 1. Jalankan Setup.exe
+
+- Klik kanan pada file **Setup.exe**, lalu pilih **"Run as administrator"** untuk menghindari masalah perizinan sistem.
+- Jendela installer Borland C++ akan terbuka.
+
+### 2. Lewati Layar Informasi Awal
+
+- Pada layar pembuka instalasi, Anda mungkin akan melihat informasi tentang produk atau persyaratan sistem.
+- Klik tombol **Skip** atau **Next** untuk melanjutkan ke tahap berikutnya.
+
+### 3. Ikuti Wizard Instalasi
+
+- Tekan tombol **Next** secara berturut-turut hingga proses instalasi dimulai.
+- Biarkan pengaturan default tetap terpilih, kecuali ada instruksi khusus dari pengajar atau panduan praktikum Anda.
+
+### 4. Tangani Dialog "Skip" (Jika Muncul)
+
+- Selama proses instalasi, ada kemungkinan muncul dialog atau notifikasi tambahan yang menawarkan komponen opsional atau registrasi produk.
+- Jika muncul pilihan **Skip**, pilih opsi tersebut untuk melewati langkah yang tidak diperlukan.
+
+### 5. Klik OK untuk Menyelesaikan
+
+- Setelah seluruh file selesai disalin ke komputer, klik tombol **OK** atau **Finish** untuk menutup wizard instalasi.
+- Borland C++ kini sudah terpasang di sistem Anda.
+
+---
+
+## Tahap 3: Menambahkan Shortcut ke Start Menu (Pin to Start)
+
+Agar Borland C++ lebih mudah diakses dari menu Start Windows, ikuti langkah berikut:
+
+1. Buka **File Explorer** (`Windows + E`).
+2. Masuk ke lokasi instalasi Borland C++ (secara default biasanya berada di `C:\Borland\BCC55` atau `C:\BC5`).
+3. Cari file aplikasi utama, biasanya bernama **BC.exe** atau **Borland C++.exe**.
+4. **Klik kanan** pada file tersebut, lalu pilih:
+   - **"Pin to Start"** - untuk menambahkan ikon ke menu Start Windows 10/11.
+   - Atau pilih **"Send to → Desktop (create shortcut)"** - jika Anda ingin membuat pintasan di Desktop.
+
+:::tip
+
+Akses Cepat Setelah di-*pin*, Anda dapat membuka Borland C++ langsung dari menu Start tanpa perlu mencari folder instalasinya lagi. Cara ini sangat menghemat waktu saat praktikum atau mengerjakan tugas pemrograman.
+:::
+
+---
+
+## Tahap 4: Pengaturan Mode Kompatibilitas (Untuk Windows 10/11)
+
+Jika Anda menggunakan Windows 10 atau Windows 11 dan mengalami masalah saat menjalankan Borland C++ (misalnya layar tidak muncul, *error*, atau aplikasi langsung tertutup), aktifkan **Compatibility Mode**:
+
+1. Klik kanan pada file **BC.exe** atau shortcut Borland C++.
+2. Pilih **Properties**.
+3. Masuk ke tab **Compatibility**.
+4. Centang opsi **"Run this program in compatibility mode for:"** dan pilih **Windows XP (Service Pack 3)** atau **Windows 7** dari menu dropdown.
+5. Centang juga opsi **"Run this program as an administrator"**.
+6. Klik **Apply**, lalu **OK**.
+
+---
+
+## Tahap 5: Menguji Instalasi
+
+Setelah instalasi selesai, lakukan uji coba untuk memastikan Borland C++ berfungsi dengan baik:
+
+1. Buka aplikasi **Borland C++** dari menu Start atau shortcut yang sudah dibuat.
+2. Jika jendela IDE Borland C++ muncul dengan tampilan antarmuka berwarna biru klasik, berarti instalasi berhasil.
+3. Coba buat program sederhana untuk menguji kompilasi:
+   - Pilih menu **File → New → Source File**.
+   - Ketikkan kode C++ sederhana berikut:
+     ```cpp
+     #include <iostream.h>
+     #include <conio.h>
+     
+     void main() {
+         clrscr();
+         cout << "Hello, Borland C++!" << endl;
+         getch();
+     }
+     ```
+   - Simpan file dengan nama `test.cpp`.
+   - Tekan **Alt + F9** untuk mengompilasi (*compile*) kode.
+   - Jika tidak ada *error*, tekan **Ctrl + F9** untuk menjalankan program.
+   - Layar output akan muncul dengan teks **"Hello, Borland C++!"**.
+
+Jika program berhasil dijalankan tanpa masalah, selamat - **instalasi Borland C++ Anda telah selesai!** 🎉
+
+---
+
+## Troubleshooting Umum
+
+Berikut adalah beberapa kendala yang sering ditemui beserta solusinya:
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Aplikasi tidak bisa dibuka atau langsung *crash* | Tidak kompatibel dengan Windows modern | Aktifkan **Compatibility Mode** untuk Windows XP/7 (lihat Tahap 4) |
+| File `Setup.exe` diblokir oleh antivirus | Deteksi *false positive* pada installer lawas | Nonaktifkan antivirus sementara, lalu jalankan installer sebagai Administrator |
+| Tampilan layar terlalu kecil atau terpotong | Resolusi layar tidak cocok dengan Borland C++ | Klik kanan pada BC.exe → Properties → Compatibility → centang "Disable display scaling on high DPI settings" |
+| *Error* "Unable to open include file 'iostream.h'" | Path library atau *include* belum terkonfigurasi | Periksa direktori instalasi dan pastikan folder `include` dan `lib` tersedia |
+| Tombol **F9** atau **Ctrl+F9** tidak berfungsi | Konflik dengan *shortcut* sistem atau aplikasi lain | Coba jalankan ulang Borland C++ sebagai Administrator atau tutup aplikasi lain yang mungkin menggunakan shortcut tersebut |
+
+---
+
+> **Catatan untuk Asisten Laboratorium:**
+> Pastikan Borland C++ sudah terpasang di semua komputer laboratorium dengan konfigurasi **Compatibility Mode** yang sudah diaktifkan. Sediakan juga file installer cadangan di server lab agar mahasiswa dapat menginstalnya sendiri jika diperlukan. Jika memungkinkan, pertimbangkan migrasi ke IDE modern seperti **Dev-C++** atau **Code::Blocks** untuk kompatibilitas dan produktivitas yang lebih baik.

@@ -1,0 +1,255 @@
+---
+sidebar_position: 5
+---
+
+# Instalasi Ulang Windows 10
+
+Instalasi ulang (*clean install*) Windows 10 adalah proses memasang ulang sistem operasi dari awal, menghapus seluruh data lama, dan mengembalikan komputer ke kondisi seperti baru. Proses ini sering dilakukan ketika sistem mengalami kerusakan parah, terinfeksi virus, atau performanya sudah sangat lambat dan tidak bisa diperbaiki dengan cara biasa.
+
+Panduan ini akan membantu Anda melakukan instalasi ulang Windows 10 secara lengkap dan aman, terutama untuk komputer laboratorium atau komputer pribadi yang hanya memiliki satu hard disk.
+
+:::danger
+
+Peringatan Penting Proses instalasi ulang akan **menghapus seluruh data** yang ada di hard disk. Pastikan Anda sudah **membackup semua file penting** (dokumen, foto, video, dll.) ke media penyimpanan eksternal (flashdisk, hard disk eksternal, atau cloud storage) sebelum melanjutkan.
+:::
+
+---
+
+## Persiapan Sebelum Instalasi
+
+Sebelum memulai proses instalasi ulang, pastikan Anda telah menyiapkan hal-hal berikut:
+
+### 1. Flashdisk Bootable Windows 10
+
+Anda memerlukan flashdisk dengan kapasitas minimal **8 GB** yang sudah berisi file instalasi Windows 10 (bootable). Flashdisk ini berfungsi sebagai media installer sistem operasi.
+
+:::tip
+
+Cara Membuat Flashdisk Bootable Jika belum memiliki flashdisk bootable Windows 10: 1. Unduh **Media Creation Tool** dari situs resmi Microsoft di [microsoft.com/software-download/windows10](https://www.microsoft.com/software-download/windows10) 2. Jalankan tool tersebut dan pilih opsi **"Create installation media for another PC"** 3. Pilih bahasa, edisi Windows 10, dan arsitektur (64-bit) 4. Pilih **USB flash drive** sebagai media dan ikuti instruksi hingga selesai
+:::
+
+### 2. Backup Data Penting
+
+Pindahkan semua file penting Anda ke lokasi aman di luar hard disk yang akan diinstal ulang (eksternal hard disk, cloud storage seperti Google Drive, atau flashdisk terpisah).
+
+### 3. Catat Product Key Windows (Opsional)
+
+Jika komputer Anda menggunakan lisensi Windows yang diaktifkan secara manual (bukan OEM/pre-installed), catat **Product Key** Anda. Biasanya untuk komputer yang sudah memiliki lisensi digital, Windows akan otomatis teraktivasi kembali setelah terhubung ke internet.
+
+---
+
+## Tahap 1: Masuk ke Menu Boot (BIOS)
+
+Untuk memulai instalasi dari flashdisk, Anda perlu mengatur komputer agar *boot* dari media USB terlebih dahulu.
+
+### 1. Colokkan Flashdisk Bootable
+
+- Masukkan **flashdisk bootable Windows 10** ke port USB komputer.
+- Pastikan tidak ada flashdisk atau perangkat USB lain yang terpasang untuk menghindari kebingungan saat memilih media boot.
+
+
+### 2. Restart Komputer dan Tekan F12
+
+- Restart atau nyalakan komputer.
+- Segera setelah layar menyala (biasanya muncul logo produsen motherboard/laptop), **tekan tombol F12** secara berulang-ulang hingga muncul **Boot Menu**.
+
+:::info
+
+Tombol Boot Menu Alternatif Tombol untuk masuk Boot Menu bisa berbeda tergantung merk komputer/motherboard: - **Dell, Lenovo, Toshiba:** F12 - **HP:** F9 atau Esc lalu F9 - **Asus:** F8 atau Esc - **Acer:** F12 atau F2 - **MSI:** F11 Jika tidak yakin, perhatikan teks di layar saat komputer pertama kali menyala (biasanya ada petunjuk seperti "Press F12 for Boot Menu").
+:::
+
+### 3. Pilih USB Drive dari Boot Menu
+
+- Setelah Boot Menu muncul, gunakan **tombol panah** di keyboard untuk memilih perangkat USB (biasanya ditandai dengan nama flashdisk atau teks "USB" / "UEFI: USB").
+- Tekan **Enter** untuk memulai booting dari flashdisk.
+
+
+---
+
+## Tahap 2: Memulai Proses Instalasi Windows 10
+
+Setelah komputer berhasil boot dari flashdisk, proses instalasi Windows 10 akan dimulai.
+
+### 1. Layar Awal Setup Windows
+
+- Layar pertama akan menampilkan pilihan **Language**, **Time and currency format**, dan **Keyboard or input method**.
+- Biarkan pengaturan default (biasanya sudah sesuai), lalu klik **Next**.
+
+
+### 2. Klik "Install Now"
+
+- Pada layar berikutnya, klik tombol besar bertuliskan **"Install now"** di tengah layar untuk memulai instalasi.
+
+
+---
+
+## Tahap 3: Memasukkan Product Key
+
+### 1. Pilih "I Don't Have a Product Key"
+
+- Layar selanjutnya akan meminta Anda memasukkan **Product Key** Windows.
+- Jika komputer Anda sudah memiliki lisensi digital (OEM/pre-installed) atau Anda akan memasukkan key nanti, klik teks **"I don't have a product key"** di bagian bawah.
+
+
+:::tip
+
+Aktivasi Otomatis Untuk komputer yang sebelumnya sudah menjalankan Windows 10 dengan lisensi aktif, Windows biasanya akan otomatis teraktivasi kembali setelah instalasi selesai dan terhubung ke internet (karena lisensi tersimpan di server Microsoft).
+:::
+
+---
+
+## Tahap 4: Memilih Edisi Windows 10
+
+### 1. Pilih "Windows 10 Pro"
+
+- Anda akan diminta memilih edisi Windows yang ingin diinstal.
+- Pilih **Windows 10 Pro** (atau edisi yang sesuai dengan lisensi komputer Anda), lalu klik **Next**.
+
+
+:::info
+
+Perbedaan Edisi Windows 10 - **Windows 10 Home:** Untuk pengguna rumahan, fitur dasar - **Windows 10 Pro:** Untuk profesional dan organisasi, dengan fitur tambahan seperti BitLocker, Remote Desktop, dan Group Policy - **Windows 10 Education:** Untuk institusi pendidikan Pilih edisi yang sesuai dengan Product Key atau lisensi yang Anda miliki.
+:::
+
+---
+
+## Tahap 5: Menyetujui Lisensi
+
+### 1. Klik "I Accept the License Terms"
+
+- Baca (atau lewati) syarat dan ketentuan lisensi Microsoft.
+- Centang kotak **"I accept the license terms"**, lalu klik **Next**.
+
+
+---
+
+## Tahap 6: Memilih Tipe Instalasi
+
+### 1. Pilih "Custom: Install Windows Only (Advanced)"
+
+- Pada layar "Which type of installation do you want?", pilih opsi kedua: **"Custom: Install Windows only (advanced)"**.
+- Opsi ini memungkinkan Anda melakukan *clean install* dan menghapus partisi lama.
+
+
+:::warning
+
+Jangan Pilih "Upgrade" Opsi **"Upgrade"** hanya digunakan jika Anda ingin mempertahankan file dan aplikasi lama. Untuk instalasi ulang yang bersih, selalu pilih **"Custom"**.
+:::
+
+---
+
+## Tahap 7: Memilih dan Memformat Hard Disk
+
+Tahap ini adalah bagian paling krusial karena melibatkan penghapusan data dan pemformatan hard disk.
+
+### 1. Untuk Hard Disk Baru (Belum Pernah Dipakai)
+
+Jika hard disk masih kosong atau baru pertama kali digunakan:
+- Pilih **Drive 0 Unallocated Space** dari daftar.
+- Klik **Next** langsung untuk melanjutkan.
+- Windows akan otomatis membuat partisi yang diperlukan.
+
+
+### 2. Untuk Hard Disk yang Sudah Ada Partisi (Instalasi Ulang)
+
+Jika hard disk sudah memiliki partisi Windows lama yang ingin dihapus:
+- Pilih **partisi utama** (biasanya berlabel "Drive 0 Partition 2: [System]" atau yang memiliki ukuran paling besar).
+- Klik tombol **Delete** di bagian bawah.
+- Konfirmasi penghapusan dengan klik **OK** pada dialog peringatan.
+- Ulangi proses delete untuk semua partisi lain yang ingin dihapus (kecuali partisi recovery jika ingin dipertahankan).
+- Setelah semua partisi dihapus, pilih **Drive 0 Unallocated Space**, lalu klik **Next**.
+
+
+:::danger
+
+Menghapus partisi akan **menghilangkan semua data** di dalamnya secara permanen. Pastikan backup sudah dilakukan sebelumnya.
+:::
+
+---
+
+## Tahap 8: Proses Instalasi Berjalan
+
+Setelah Anda klik **Next** pada tahap pemilihan disk, Windows akan mulai menyalin file dan menginstal sistem operasi.
+
+### 1. Tunggu Proses "Installing Updates"
+
+- Proses ini memakan waktu sekitar **10-30 menit** tergantung kecepatan hard disk dan komputer.
+- Komputer akan restart beberapa kali secara otomatis.
+
+
+### 2. Cabut Flashdisk Saat Restart
+
+- **Penting:** Ketika sudah sampai tahap **"Installing updates"** atau saat komputer melakukan restart pertama kali, **cabut flashdisk bootable** Anda.
+- Hal ini mencegah komputer boot ulang dari flashdisk dan mengulang proses instalasi dari awal.
+
+
+---
+
+## Tahap 9: Konfigurasi Awal Windows (OOBE)
+
+Setelah proses instalasi selesai, komputer akan restart dan masuk ke tahap **Out-of-Box Experience (OOBE)** - pengaturan awal Windows.
+
+### 1. Pilih Region dan Keyboard Layout
+
+- Pilih negara/region Anda (misalnya **Indonesia**).
+- Pilih layout keyboard (biasanya **US** atau **Indonesia**).
+
+### 2. Koneksi Internet
+
+- Jika ada koneksi Wi-Fi/Ethernet, Windows akan meminta Anda terhubung ke internet.
+- Anda bisa melewati langkah ini dengan memilih **"I don't have internet"** atau **"Continue with limited setup"** jika ingin mengatur nanti.
+
+### 3. Buat Akun Lokal atau Microsoft Account
+
+- Windows akan menawarkan untuk login dengan **Microsoft Account** atau membuat **Local Account**.
+- Masukkan nama pengguna dan password sesuai keinginan.
+
+### 4. Pengaturan Privasi
+
+- Atur pengaturan privasi sesuai preferensi (bisa dinonaktifkan semua untuk privasi maksimal).
+
+### 5. Selesai
+
+- Setelah semua pengaturan selesai, Windows akan mempersiapkan desktop.
+- Tunggu beberapa saat hingga desktop Windows 10 muncul.
+
+
+---
+
+## Tahap 10: Pasca Instalasi
+
+Setelah berhasil masuk ke desktop Windows 10, lakukan hal-hal berikut:
+
+### 1. Install Driver
+
+- Instal driver untuk hardware komputer (chipset, VGA, audio, LAN/Wi-Fi, dll.) dari website resmi produsen motherboard/laptop atau gunakan driver pack seperti **Snappy Driver Installer**.
+
+### 2. Aktifkan Windows (Jika Belum Otomatis)
+
+- Buka **Settings → Update & Security → Activation** untuk mengecek status aktivasi.
+- Jika belum aktif, masukkan Product Key atau gunakan tool aktivasi sesuai kebijakan institusi.
+
+### 3. Instal Software Pendukung
+
+- Instal ulang aplikasi yang diperlukan seperti browser, antivirus, Microsoft Office, dan software lainnya.
+
+### 4. Windows Update
+
+- Jalankan **Windows Update** untuk mendapatkan patch keamanan dan update terbaru.
+
+---
+
+## Troubleshooting Umum
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Boot Menu tidak muncul saat tekan F12 | Tombol boot menu salah atau **Fast Boot** aktif di BIOS | Masuk ke BIOS (F2/Del) dan nonaktifkan Fast Boot, atau coba tombol alternatif (F8, F9, F11, Esc) |
+| USB tidak terdeteksi di Boot Menu | Flashdisk tidak bootable atau port USB rusak | Buat ulang flashdisk bootable atau coba port USB lain |
+| Error "Windows cannot be installed to this disk" | Hard disk menggunakan format GPT sedangkan BIOS dalam mode Legacy (atau sebaliknya) | Masuk ke BIOS dan ubah boot mode dari Legacy ke UEFI (atau sebaliknya) sesuai format disk |
+| Komputer restart terus saat instalasi | Flashdisk tidak dicabut setelah tahap "Installing updates" | Cabut flashdisk saat komputer restart pertama kali |
+| Windows tidak bisa aktivasi setelah instal | Lisensi digital tidak terekam di server Microsoft atau Product Key salah | Kontak IT support untuk bantuan aktivasi atau masukkan Product Key yang valid |
+
+---
+
+> **Catatan untuk Teknisi Laboratorium:**
+> Untuk instalasi massal komputer lab, pertimbangkan menggunakan **Windows Deployment Services (WDS)** atau membuat **sistem image** dengan tools seperti **Clonezilla** atau **Acronis True Image** agar proses lebih efisien. Pastikan semua komputer memiliki lisensi Windows yang valid dan terdokumentasi dengan baik.

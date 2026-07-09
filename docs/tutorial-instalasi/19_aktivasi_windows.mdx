@@ -1,0 +1,186 @@
+---
+sidebar_position: 19
+---
+
+# Cara Aktivasi Windows dengan AAct
+
+Aktivasi Windows diperlukan agar sistem operasi dapat digunakan secara penuh tanpa batasan fitur dan tanpa watermark "Activate Windows" di pojok kanan bawah layar. AAct adalah tool aktivasi Windows yang populer dan mudah digunakan untuk mengaktifkan Windows 10 dan Windows 11.
+
+:::warning
+
+Disclaimer Legal Tutorial ini untuk tujuan edukasi di lingkungan lab. Untuk penggunaan pribadi atau komersial, beli lisensi Windows resmi dari Microsoft atau authorized reseller.
+:::
+
+---
+
+## Yang Anda Perlukan
+
+1. **File AAct** (biasanya tersedia di folder Master Software lab dengan nama **AAct 4.2.4.kuyhAa** atau sejenisnya)
+2. **Windows yang belum teraktivasi** atau aktivasi yang expired
+3. **Akses Administrator** untuk menjalankan tool
+
+:::info
+
+AAct AAct (Advanced Automatic Activation) adalah tool gratis untuk aktivasi Windows dan Office menggunakan metode KMS (Key Management Service). Tool ini bekerja secara otomatis tanpa perlu input serial number manual.
+:::
+
+---
+
+## Tahap 1: Siapkan File AAct
+
+### Lokasi File
+
+File AAct biasanya tersedia di:
+- **Master Software** di server lab (folder D:\Master Software atau E:\Master Software)
+- Atau di folder shared network lab
+- Atau flashdisk teknisi lab
+
+### Nama File
+
+Cari folder atau file dengan nama:
+- **AAct 4.2.4.kuyhAa**
+- **AAct Portable**
+- Atau sejenisnya dengan versi AAct
+
+---
+
+## Tahap 2: Jalankan AAct
+
+### 1. Buka Folder AAct
+
+- Navigasi ke lokasi file AAct (Master Software atau lokasi lainnya)
+- Buka folder tersebut
+
+### 2. Jalankan File Executable
+
+- Cari file **AAct.exe** atau **AAct_x64.exe**
+- Klik kanan pada file tersebut
+- Pilih **"Run as administrator"**
+- Jika muncul **User Account Control (UAC)**, klik **Yes**
+
+:::danger
+
+Harus Run as Administrator AAct harus dijalankan dengan hak akses Administrator agar bisa melakukan aktivasi ke sistem Windows. Jika tidak, proses aktivasi akan gagal.
+:::
+
+### 3. Tunggu AAct Terbuka
+
+- Jendela AAct akan terbuka dengan tampilan sederhana
+- Anda akan melihat informasi Windows versi dan status aktivasi saat ini
+
+---
+
+## Tahap 3: Klik Aktivasi Windows
+
+### 1. Pilih Tab atau Tombol Windows
+
+- Di jendela AAct, cari bagian atau tab untuk **Windows Activation**
+- Biasanya ada ikon Windows atau tombol berlabel **"Activate Windows"**
+
+### 2. Klik Tombol Activate Windows
+
+- Klik tombol **"Activate Windows"** atau ikon Windows
+- AAct akan mulai proses aktivasi secara otomatis
+- Tunggu beberapa detik (biasanya 5-15 detik)
+
+### 3. Lihat Status Aktivasi
+
+Setelah proses selesai, akan muncul salah satu pesan:
+- **"Successfully activated"** atau **"Activation successful"** - Aktivasi berhasil
+- Atau pesan error jika ada masalah (lihat Troubleshooting)
+
+### 4. Tutup AAct
+
+- Klik tombol **Close** atau **Exit**
+- Atau langsung close window AAct
+
+---
+
+## Tahap 4: Verifikasi Aktivasi
+
+Setelah aktivasi, pastikan Windows benar-benar teraktivasi.
+
+### Cara Cek Status Aktivasi
+
+**Metode 1: Melalui Settings**
+1. Tekan `Windows + I` untuk membuka Settings
+2. Pilih **Update & Security**
+3. Klik **Activation** di menu kiri
+4. Lihat status aktivasi:
+   - Jika tertulis **"Windows is activated"** - Berhasil ✅
+   - Jika masih **"Windows is not activated"** - Gagal ❌
+
+**Metode 2: Melalui System Properties**
+1. Klik kanan **This PC** di Desktop atau File Explorer
+2. Pilih **Properties**
+3. Scroll ke bawah bagian **Windows activation**
+4. Lihat status aktivasi
+
+**Metode 3: Cek Watermark**
+- Lihat pojok kanan bawah desktop
+- Jika watermark **"Activate Windows"** sudah hilang - Berhasil ✅
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| AAct tidak bisa dibuka | File diblokir antivirus | Nonaktifkan antivirus sementara atau tambahkan ke whitelist |
+| Error "Access denied" | Tidak dijalankan sebagai Administrator | Klik kanan → Run as administrator |
+| Aktivasi gagal / error | Koneksi internet bermasalah atau Windows corrupt | Pastikan koneksi internet aktif, atau coba restart lalu aktivasi ulang |
+| Status masih "Not activated" | Perlu restart komputer | Restart Windows dan cek ulang status aktivasi |
+| Watermark masih muncul | Cache watermark belum refresh | Restart Windows atau logout-login ulang |
+| AAct tidak muncul / crash | File corrupt atau versi tidak compatible | Download ulang AAct versi terbaru |
+
+---
+
+## Tips Penting
+
+### 1. Aktivasi Mungkin Temporary (KMS)
+
+AAct menggunakan metode KMS yang bersifat **temporary** (biasanya 180 hari). Setelah periode habis, Anda perlu aktivasi ulang dengan AAct. Namun, beberapa versi AAct bisa set auto-renewal.
+
+### 2. Jangan Update Windows Terlalu Sering
+
+Update Windows besar (seperti feature update) kadang bisa reset aktivasi. Jika ini terjadi, jalankan AAct lagi untuk re-activate.
+
+### 3. Alternatif Aktivasi
+
+Jika AAct tidak berhasil, alternatif lain yang bisa dicoba:
+- **KMS Auto** - Tool aktivasi KMS lainnya
+- **Microsoft Activation Scripts (MAS)** - Script activator yang lebih modern (lihat tutorial terpisah)
+- **HWIDGEN** - Aktivasi permanent untuk Windows 10
+
+### 4. Untuk Institusi Pendidikan
+
+Institusi pendidikan bisa mendapatkan lisensi Windows murah atau gratis melalui program:
+- **Microsoft Azure Dev Tools for Teaching** (dulu DreamSpark)
+- **Microsoft Imagine Academy**
+- Hubungi Microsoft authorized education partner
+
+---
+
+## Perbedaan Metode Aktivasi
+
+| Metode | Tipe | Durasi | Keterangan |
+|---|---|---|---|
+| **AAct (KMS)** | Temporary | 180 hari | Perlu re-activate setiap 6 bulan |
+| **MAS (HWID)** | Permanent | Selamanya | Aktivasi permanen untuk Windows 10/11 |
+| **Retail Key** | Permanent | Selamanya | Lisensi resmi dari Microsoft |
+| **OEM Key** | Permanent | Selamanya | Pre-installed di laptop/PC branded |
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Siapkan AAct di Master Software yang mudah diakses semua komputer lab. Untuk lab dengan banyak komputer, pertimbangkan setup KMS server lokal agar aktivasi bisa dilakukan otomatis via network. Untuk solusi permanen dan legal, ajukan pembelian lisensi volume Microsoft untuk institusi pendidikan yang biasanya jauh lebih murah.
+
+---
+
+**Selesai!** Windows kini sudah teraktivasi dan siap digunakan tanpa batasan fitur.
+
+---
+
+**Lihat Juga:**
+- Tutorial **"Cara Aktivasi Microsoft Office"** untuk aktivasi Office
+- Tutorial **"Cara Cek Aktivasi Windows"** untuk memverifikasi status aktivasi secara detail

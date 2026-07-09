@@ -1,0 +1,168 @@
+---
+sidebar_position: 25
+---
+
+# Cara Cek Aktivasi Windows dan Office
+
+Setelah mengaktifkan Windows atau Microsoft Office, penting untuk memverifikasi apakah aktivasi berhasil. Panduan ini akan membantu Anda mengecek status aktivasi Windows dan Office dengan mudah.
+
+---
+
+## Mengapa Perlu Cek Aktivasi?
+
+- Memastikan Windows dan Office sudah teraktivasi dengan benar
+- Menghindari notifikasi aktivasi yang mengganggu
+- Memastikan semua fitur dapat digunakan tanpa batasan
+- Mengecek apakah aktivasi bersifat permanent atau temporary
+
+---
+
+## Cara Cek Aktivasi Windows
+
+### Metode 1: Melalui Settings (Paling Mudah)
+
+1. Tekan `Windows + I` untuk membuka **Settings**
+2. Pilih **Update & Security**
+3. Klik **Activation** di menu sebelah kiri
+4. Lihat status aktivasi:
+   - ✅ **"Windows is activated"** - Windows sudah aktif
+   - ✅ **"Windows is activated with a digital license"** - Aktivasi permanent
+   - ❌ **"Windows is not activated"** - Belum aktif, perlu aktivasi
+   - ⚠️ **"Windows will expire soon"** - Aktivasi KMS temporary, perlu re-activate
+
+### Metode 2: Melalui System Properties
+
+1. Klik kanan **This PC** di Desktop atau File Explorer
+2. Pilih **Properties**
+3. Scroll ke bagian bawah ke **Windows activation**
+4. Lihat status aktivasi dan tipe lisensi
+
+### Metode 3: Menggunakan Command Prompt
+
+1. Tekan `Windows + R`, ketik **cmd**, tekan Enter
+2. Ketik perintah:
+   ```
+   slmgr /xpr
+   ```
+3. Tekan Enter
+4. Akan muncul dialog dengan informasi aktivasi:
+   - **"The machine is permanently activated"** - Aktivasi permanent
+   - **"The machine is activated until [tanggal]"** - Aktivasi KMS temporary
+
+---
+
+## Cara Cek Aktivasi Microsoft Office
+
+### Metode 1: Melalui Aplikasi Office (Paling Mudah)
+
+1. Buka aplikasi **Word** (atau Excel, PowerPoint)
+2. Klik menu **File** di pojok kiri atas
+3. Pilih **Account** di bagian bawah menu kiri
+4. Lihat bagian **Product Information**:
+   - ✅ **"Product Activated"** - Office sudah aktif
+   - ✅ **"This product is licensed to: [Nama]"** - Menunjukkan pemilik lisensi
+   - ❌ **"Activate Product"** - Office belum aktif
+   - ❌ **"Subscription expired"** - Langganan Office 365 habis
+
+### Metode 2: Cek Versi dan Build
+
+Di halaman **Account** yang sama:
+- Lihat **About Word** atau **About [Aplikasi]**
+- Informasi lengkap versi Office dan status aktivasi akan ditampilkan
+- Jika ada ikon hijau atau teks "Licensed", Office teraktivasi
+
+---
+
+## Cek Watermark Windows
+
+Cara paling cepat untuk tahu Windows belum aktif:
+
+- Lihat **pojok kanan bawah desktop**
+- Jika ada tulisan **"Activate Windows"** dengan watermark transparan - Windows belum aktif
+- Jika tidak ada watermark - Windows sudah aktif
+
+---
+
+## Apa yang Harus Dilakukan Jika Belum Aktif?
+
+### Jika Windows Belum Aktif
+
+1. Gunakan **AAct** untuk aktivasi KMS (lihat tutorial "Cara Aktivasi Windows")
+2. Atau gunakan **Microsoft Activation Scripts (MAS)** untuk aktivasi HWID permanent
+3. Restart komputer setelah aktivasi
+
+### Jika Office Belum Aktif
+
+1. Gunakan **Microsoft Activation Scripts (MAS)** metode Ohook (lihat tutorial "Cara Aktivasi Microsoft Office")
+2. Atau gunakan **AAct** yang juga bisa aktivasi Office
+3. Restart aplikasi Office setelah aktivasi
+
+---
+
+## Tipe Aktivasi dan Durasinya
+
+| Metode | Tipe | Durasi | Keterangan |
+|---|---|---|---|
+| **HWID (MAS)** | Permanent | Selamanya | Paling recommended untuk Windows 10/11 |
+| **KMS (AAct)** | Temporary | 180 hari | Perlu re-activate setiap 6 bulan |
+| **Ohook (MAS)** | Permanent | Selamanya | Paling recommended untuk Office |
+| **Retail Key** | Permanent | Selamanya | Lisensi resmi dari Microsoft |
+| **OEM Key** | Permanent | Selamanya | Pre-installed di laptop/PC branded |
+
+---
+
+## Perintah Command Prompt untuk Cek Detail
+
+Untuk informasi aktivasi lebih detail:
+
+**Windows:**
+```cmd
+slmgr /dlv
+```
+Menampilkan informasi lengkap lisensi Windows
+
+**Office:**
+```cmd
+cscript "C:\Program Files\Microsoft Office\Office16\OSPP.VBS" /dstatus
+```
+Menampilkan status aktivasi Office (sesuaikan path untuk versi Office Anda)
+
+---
+
+## Tips Penting
+
+### 1. Cek Secara Berkala
+
+Untuk aktivasi KMS yang temporary, cek status setiap beberapa bulan untuk memastikan tidak expire.
+
+### 2. Screenshot Status Aktivasi
+
+Simpan screenshot status aktivasi sebagai dokumentasi, terutama untuk komputer lab.
+
+### 3. Catat Metode Aktivasi
+
+Catat metode aktivasi yang digunakan (AAct, MAS, dll.) agar mudah re-activate jika diperlukan.
+
+### 4. Set Reminder
+
+Untuk aktivasi KMS (180 hari), set reminder di kalender untuk re-activate sebelum expire.
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Status tidak muncul di Settings | Windows corrupt atau service mati | Restart Windows Update service atau restart komputer |
+| Office menunjukkan "Not licensed" | Aktivasi gagal atau reset | Jalankan ulang tool aktivasi Office |
+| Watermark masih muncul padahal sudah aktif | Cache watermark belum refresh | Restart komputer atau logout-login ulang |
+| Status KMS berubah jadi "Not activated" | KMS server tidak reachable atau expired | Re-activate dengan AAct atau beralih ke HWID/Ohook |
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Lakukan pengecekan aktivasi Windows dan Office di semua komputer lab secara berkala (minimal setiap semester). Buat checklist status aktivasi untuk memudahkan monitoring. Untuk komputer dengan aktivasi KMS, set schedule re-activation sebelum expire. Dokumentasikan metode aktivasi yang digunakan untuk setiap komputer.
+
+---
+
+**Selesai!** Anda kini tahu cara mengecek status aktivasi Windows dan Microsoft Office dengan mudah dan cepat.

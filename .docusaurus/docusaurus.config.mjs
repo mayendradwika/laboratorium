@@ -74,7 +74,7 @@ export default {
   ],
   "themes": [
     [
-      "C:\\Users\\pc\\DEv\\docs\\node_modules\\@easyops-cn\\docusaurus-search-local\\dist\\server\\server\\index.js",
+      "C:\\_project\\docs\\node_modules\\@easyops-cn\\docusaurus-search-local\\dist\\server\\server\\index.js",
       {
         "hashed": true,
         "language": [

@@ -11,9 +11,9 @@ Flutter adalah *framework* buatan **Google** yang memungkinkan kita membuat apli
 
 Panduan ini akan membantu Anda menginstal Flutter di **Windows**, **macOS**, maupun **Linux** secara lengkap dan mudah diikuti.
 
-:::info 
-Sebelum Mulai
-Pastikan komputer Anda memiliki koneksi internet yang stabil dan ruang penyimpanan minimal **2 GB** tersedia untuk Flutter SDK beserta komponen pendukungnya.
+:::info
+
+Sebelum Mulai Pastikan komputer Anda memiliki koneksi internet yang stabil dan ruang penyimpanan minimal **2 GB** tersedia untuk Flutter SDK beserta komponen pendukungnya.
 :::
 
 ---
@@ -35,8 +35,9 @@ Pilih tab di bawah ini sesuai dengan sistem operasi yang Anda gunakan.
    C:\src\flutter
    ```
 
-:::warning Perhatian
-Jangan mengekstrak Flutter ke dalam folder yang membutuhkan hak akses Administrator, seperti `C:\Program Files\`. Hal ini dapat menyebabkan masalah perizinan saat menjalankan perintah Flutter.
+:::warning
+
+Perhatian Jangan mengekstrak Flutter ke dalam folder yang membutuhkan hak akses Administrator, seperti `C:\Program Files\`. Hal ini dapat menyebabkan masalah perizinan saat menjalankan perintah Flutter.
 :::
 
 ### B. Mendaftarkan Path Environment
@@ -69,11 +70,12 @@ Agar perintah `flutter` bisa dikenali di **Command Prompt** atau **PowerShell**,
 
 1. Buka situs resmi Flutter di **[flutter.dev/get-started/install/macos](https://docs.flutter.dev/get-started/install/macos)**.
 2. Unduh *file* `.zip` yang sesuai dengan **tipe prosesor** Mac Anda:
-   - **Apple Silicon** — untuk Mac dengan chip M1, M2, M3, atau M4.
-   - **Intel** — untuk Mac dengan prosesor Intel.
+   - **Apple Silicon** - untuk Mac dengan chip M1, M2, M3, atau M4.
+   - **Intel** - untuk Mac dengan prosesor Intel.
 
-:::tip Cara Mengecek Tipe Prosesor
-Klik ikon  (Apple) di pojok kiri atas layar → pilih **About This Mac**. Lihat pada baris **Chip** atau **Processor**.
+:::tip
+
+Cara Mengecek Tipe Prosesor Klik ikon  (Apple) di pojok kiri atas layar → pilih **About This Mac**. Lihat pada baris **Chip** atau **Processor**.
 :::
 
 3. Buka aplikasi **Terminal** (bisa dicari melalui Spotlight dengan menekan `Cmd + Space`).
@@ -146,8 +148,9 @@ Sama seperti macOS, kita perlu menambahkan *path* Flutter ke konfigurasi *shell*
    source ~/.bashrc
    ```
 
-:::info Menggunakan ZSH?
-Jika Anda menggunakan ZSH sebagai *shell* default (bukan Bash), ubah langkah di atas dengan mengedit *file* `~/.zshrc` alih-alih `~/.bashrc`.
+:::info
+
+Menggunakan ZSH? Jika Anda menggunakan ZSH sebagai *shell* default (bukan Bash), ubah langkah di atas dengan mengedit *file* `~/.zshrc` alih-alih `~/.bashrc`.
 :::
 
 ### C. Memverifikasi Instalasi
@@ -173,9 +176,9 @@ Setelah Flutter SDK terpasang, langkah selanjutnya adalah memeriksa apakah semua
    flutter doctor
    ```
 3. Flutter Doctor akan menampilkan laporan berupa:
-   - ✅ **Tanda centang hijau** `[✓]` — komponen sudah siap dan terpasang.
-   - ❌ **Tanda silang merah** `[✗]` — komponen masih kurang dan perlu diinstal.
-   - ⚠️ **Tanda seru kuning** `[!]` — komponen tersedia tetapi ada peringatan.
+   - ✅ **Tanda centang hijau** `[✓]` - komponen sudah siap dan terpasang.
+   - ❌ **Tanda silang merah** `[✗]` - komponen masih kurang dan perlu diinstal.
+   - ⚠️ **Tanda seru kuning** `[!]` - komponen tersedia tetapi ada peringatan.
 
 Ikuti petunjuk yang diberikan oleh Flutter Doctor untuk melengkapi komponen yang masih kurang.
 
@@ -205,7 +208,10 @@ flutter doctor --android-licenses
 
 Ketik **`y`** (yes) dan tekan **Enter** pada setiap pertanyaan lisensi yang muncul.
 
-:::tip
+
+
+:::info
+
 Setelah menjalankan perintah di atas, jalankan kembali `flutter doctor` untuk memastikan semua komponen Android sudah berstatus hijau `[✓]`.
 :::
 
@@ -250,15 +256,12 @@ Untuk memastikan seluruh instalasi berjalan dengan benar, mari kita buat proyek 
    flutter run
    ```
 
-:::info Menjalankan di Browser
-Jika Anda belum menyiapkan emulator Android, Anda bisa menjalankan aplikasi Flutter di *browser* dengan perintah:
-```bash
-flutter run -d chrome
-```
-Pastikan Google Chrome sudah terpasang di komputer Anda.
+:::info
+
+Menjalankan di Browser Jika Anda belum menyiapkan emulator Android, Anda bisa menjalankan aplikasi Flutter di *browser* dengan perintah: ```bash flutter run -d chrome ``` Pastikan Google Chrome sudah terpasang di komputer Anda.
 :::
 
-Jika Anda melihat aplikasi demo Flutter muncul dengan tampilan *counter app* (aplikasi penghitung), selamat — **instalasi Flutter Anda berhasil!** 🎉
+Jika Anda melihat aplikasi demo Flutter muncul dengan tampilan *counter app* (aplikasi penghitung), selamat - **instalasi Flutter Anda berhasil!** 🎉
 
 ---
 

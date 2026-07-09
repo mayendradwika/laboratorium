@@ -1,0 +1,230 @@
+---
+sidebar_position: 20
+---
+
+# Cara Aktivasi Microsoft Office dengan MAS
+
+Microsoft Office perlu diaktivasi agar semua fitur dapat digunakan tanpa batasan dan tanpa notifikasi aktivasi yang mengganggu. Microsoft Activation Scripts (MAS) adalah tool modern berbasis script yang dapat mengaktifkan Microsoft Office dengan mudah dan aman.
+
+:::warning
+
+Disclaimer Legal Tutorial ini untuk tujuan edukasi di lingkungan lab. Untuk penggunaan pribadi atau komersial, beli lisensi Office resmi dari Microsoft atau berlangganan Microsoft 365.
+:::
+
+---
+
+## Yang Anda Perlukan
+
+1. **Folder Microsoft-Activation-Scripts** (biasanya tersedia di Master Software lab)
+2. **Microsoft Office** yang sudah terinstal namun belum teraktivasi
+3. **Akses Administrator** untuk menjalankan script
+
+:::info
+
+Microsoft Activation Scripts (MAS) MAS adalah kumpulan script aktivasi open-source yang tersedia di GitHub. Script ini menggunakan metode Ohook untuk aktivasi Office secara permanen tanpa perlu KMS server.
+:::
+
+---
+
+## Tahap 1: Buka Folder Microsoft-Activation-Scripts
+
+### Lokasi File
+
+Folder MAS biasanya tersedia di:
+- **Master Software** di server lab (D:\Master Software atau E:\Master Software)
+- Folder shared network lab
+- Atau flashdisk teknisi
+
+### Nama Folder
+
+Cari folder dengan nama:
+- **Microsoft-Activation-Scripts**
+- **MAS**
+- Atau **Microsoft-Activation-script** (tanpa 's')
+
+Buka folder tersebut.
+
+---
+
+## Tahap 2: Masuk ke Folder All-in-One Version
+
+### 1. Cari Subfolder MAS
+
+Di dalam folder Microsoft-Activation-Scripts, cari subfolder bernama:
+- **MAS-All-in-one-version** 
+- Atau **All-in-One-Version**
+- Atau hanya **MAS**
+
+### 2. Buka Folder Tersebut
+
+Double-click untuk membuka folder MAS-All-in-One-Version.
+
+Di dalam folder ini, Anda akan melihat beberapa file script (.cmd atau .bat).
+
+---
+
+## Tahap 3: Jalankan MAS-AIO.cmd
+
+### 1. Cari File MAS-AIO.cmd
+
+Di dalam folder All-in-One-Version, cari file bernama:
+- **MAS-AIO.cmd**
+- Atau **MAS_AIO.cmd**
+
+### 2. Jalankan sebagai Administrator
+
+- Klik kanan pada file **MAS-AIO.cmd**
+- Pilih **"Run as administrator"**
+- Jika muncul **User Account Control (UAC)**, klik **Yes**
+
+:::danger
+
+Harus Run as Administrator Script harus dijalankan dengan hak akses Administrator agar bisa melakukan aktivasi ke sistem Office. Jika tidak, script akan gagal.
+:::
+
+### 3. Jendela Command Prompt Akan Terbuka
+
+Setelah dijalankan, jendela Command Prompt (cmd) akan muncul dengan menu pilihan aktivasi:
+
+```
+====================================
+Microsoft Activation Scripts
+====================================
+[1] HWID Activation (Windows)
+[2] KMS38 Activation (Windows)
+[3] Online KMS Activation (Windows/Office)
+[4] Ohook Activation (Office)
+[5] Check Activation Status
+[0] Exit
+====================================
+```
+
+---
+
+## Tahap 4: Pilih Ohook - Install Office
+
+### 1. Ketik Angka 4
+
+- Di menu yang muncul, ketik angka **4** (untuk Ohook Activation - Office)
+- Tekan **Enter**
+
+### 2. Pilih Install Ohook
+
+Menu selanjutnya akan muncul dengan pilihan:
+```
+====================================
+Ohook Activation
+====================================
+[1] Install Ohook
+[2] Uninstall Ohook
+[0] Go Back
+====================================
+```
+
+- Ketik angka **1** (Install Ohook)
+- Tekan **Enter**
+
+### 3. Tunggu Proses Aktivasi
+
+- Script akan mulai menginstall Ohook dan mengaktifkan Office
+- Proses biasanya hanya memakan waktu 5-15 detik
+- Akan muncul pesan status:
+  - **"Office is activated successfully"** - Aktivasi berhasil ✅
+  - Atau pesan lain jika ada masalah
+
+### 4. Tutup Script
+
+- Setelah muncul pesan sukses, tekan tombol apa saja untuk kembali ke menu
+- Ketik **0** untuk Exit
+- Atau langsung close window Command Prompt
+
+---
+
+## Tahap 5: Verifikasi Aktivasi Office
+
+### Cara Cek Status Aktivasi Office
+
+1. Buka aplikasi **Word** (atau Excel, PowerPoint)
+2. Klik menu **File** di pojok kiri atas
+3. Pilih **Account** di bagian bawah menu kiri
+4. Lihat bagian **Product Information**:
+   - Jika tertulis **"Product Activated"** - Berhasil ✅
+   - Jika masih meminta aktivasi - Gagal ❌
+
+Atau lihat tutorial terpisah: **"Cara Cek Aktivasi Windows"** untuk metode verifikasi lengkap.
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Script tidak bisa dibuka | File diblokir antivirus | Nonaktifkan antivirus sementara atau tambahkan folder MAS ke whitelist |
+| Error "Access denied" | Tidak dijalankan sebagai Administrator | Klik kanan → Run as administrator |
+| Menu tidak muncul / crash | File script corrupt | Download ulang MAS dari GitHub: [github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) |
+| Office masih belum aktif | Perlu restart Office | Tutup semua aplikasi Office dan buka ulang |
+| Error "Office not found" | Office belum terinstal atau versi tidak didukung | Pastikan Office sudah terinstal dengan benar |
+
+---
+
+## Keuntungan Ohook Method
+
+| Aspek | Ohook (MAS) | KMS Method |
+|---|---|---|
+| **Durasi** | Permanent (selamanya) | Temporary (180 hari) |
+| **Re-activation** | Tidak perlu | Perlu setiap 6 bulan |
+| **Internet** | Tidak perlu setelah install | Perlu saat aktivasi |
+| **Stable** | Sangat stabil | Bisa reset saat update |
+
+---
+
+## Tips Penting
+
+### 1. Aktivasi Permanent
+
+Ohook memberikan aktivasi permanent untuk Office. Anda tidak perlu aktivasi ulang setiap beberapa bulan seperti metode KMS.
+
+### 2. Aman dari Update
+
+Aktivasi Ohook tidak terpengaruh oleh Windows Update atau Office Update, sehingga lebih stabil.
+
+### 3. Download MAS Terbaru
+
+Jika file MAS di lab sudah lama, download versi terbaru dari repository resmi GitHub:
+[github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+
+### 4. Bisa Aktivasi Windows Juga
+
+Selain Office, MAS juga bisa mengaktifkan Windows menggunakan metode HWID (pilihan menu nomor 1). Ini alternatif dari AAct.
+
+### 5. Untuk Institusi Pendidikan
+
+Institusi pendidikan bisa mendapatkan lisensi Office gratis atau murah melalui:
+- **Microsoft 365 Education** - Gratis untuk siswa dan guru
+- **Office 365 A1** - Gratis untuk institusi pendidikan
+- Hubungi Microsoft education partner
+
+---
+
+## Alternatif Aktivasi Office
+
+Jika Ohook tidak berhasil, coba alternatif lain:
+
+1. **KMS_VL_ALL** - Script KMS untuk Office (temporary)
+2. **AAct** - Tool yang juga bisa aktivasi Office (selain Windows)
+3. **Office Tool Plus** - Tool all-in-one untuk download, install, dan aktivasi Office
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Simpan folder Microsoft-Activation-Scripts di Master Software yang mudah diakses. Update script secara berkala dari GitHub untuk mendapatkan versi terbaru. Untuk lab dengan banyak komputer, pertimbangkan membuat image sistem yang sudah include Office teraktivasi untuk mempercepat deployment. Untuk solusi legal, ajukan lisensi volume Microsoft 365 Education untuk institusi.
+
+---
+
+**Selesai!** Microsoft Office kini sudah teraktivasi dan siap digunakan tanpa batasan fitur.
+
+---
+
+**Lihat Juga:**
+- Tutorial **"Cara Aktivasi Windows"** untuk aktivasi Windows menggunakan AAct
+- Tutorial **"Cara Cek Aktivasi Windows"** untuk verifikasi status aktivasi

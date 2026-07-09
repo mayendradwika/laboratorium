@@ -26,8 +26,113 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "tutorial-instalasi/aktivasi_office",
+              "path": "/docs/docs/tutorial-instalasi/aktivasi_office",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/aktivasi_windows",
+              "path": "/docs/docs/tutorial-instalasi/aktivasi_windows",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/blokir_firewall",
+              "path": "/docs/docs/tutorial-instalasi/blokir_firewall",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/bootable_rufus",
+              "path": "/docs/docs/tutorial-instalasi/bootable_rufus",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/bootable_windows10",
+              "path": "/docs/docs/tutorial-instalasi/bootable_windows10",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/cek_aktivasi",
+              "path": "/docs/docs/tutorial-instalasi/cek_aktivasi",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/connect_mendeley_word",
+              "path": "/docs/docs/tutorial-instalasi/connect_mendeley_word",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/flashdisk_cloning",
+              "path": "/docs/docs/tutorial-instalasi/flashdisk_cloning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_accurate5",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_accurate5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_animate",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_animate",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_borland_cpp",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_borland_cpp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_coreldraw",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_coreldraw",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_debian5",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_debian5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_eviews",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_eviews",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_flash_cs3",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_flash_cs3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "tutorial-instalasi/instalasi_flutter",
               "path": "/docs/docs/tutorial-instalasi/instalasi_flutter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_matlab",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_matlab",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_office_access",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_office_access",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_photoshop_cs6",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_photoshop_cs6",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_smartpls",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_smartpls",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_spss",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_spss",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/instalasi_ulang_windows",
+              "path": "/docs/docs/tutorial-instalasi/instalasi_ulang_windows",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -38,6 +143,11 @@
             {
               "id": "tutorial-instalasi/instalasi_xampp",
               "path": "/docs/docs/tutorial-instalasi/instalasi_xampp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-instalasi/perbaiki_xampp",
+              "path": "/docs/docs/tutorial-instalasi/perbaiki_xampp",
               "sidebar": "tutorialSidebar"
             },
             {

@@ -1,0 +1,222 @@
+---
+sidebar_position: 13
+---
+
+# Instalasi Adobe Animate CC (Portable)
+
+Adobe Animate CC adalah software untuk membuat animasi, konten interaktif, dan multimedia yang merupakan penerus dari Adobe Flash Professional. Versi portable dari Animate CC sangat praktis karena tidak memerlukan proses instalasi yang rumit dan dapat langsung digunakan setelah disalin ke komputer.
+
+Panduan ini akan membantu Anda memasang dan menjalankan Adobe Animate CC versi portable di komputer laboratorium atau komputer pribadi.
+
+:::info
+
+Adobe Animate CC Adobe Animate CC adalah versi modern dari Adobe Flash yang mendukung pembuatan konten animasi untuk berbagai platform termasuk HTML5 Canvas, WebGL, dan format video. Software ini sangat cocok untuk praktikum desain animasi dan multimedia interaktif.
+:::
+
+---
+
+## Persiapan
+
+Sebelum memulai, pastikan Anda memiliki:
+
+1. **Folder Adobe Animate CC Portable** (biasanya sudah tersedia di komputer lab atau server)
+2. **Akses Administrator** untuk menyalin file ke Program Files
+3. **Koneksi internet** (opsional, jika perlu download file DLL yang hilang)
+
+---
+
+## Tahap 1: Menyalin Folder ke Program Files
+
+Langkah pertama adalah menyalin folder Adobe Animate CC dari komputer sumber ke komputer tujuan.
+
+### 1. Cari Folder Adobe Animate CC
+
+- Buka **File Explorer** (`Windows + E`).
+- Cari folder **Adobe Animate CC** di komputer sumber (bisa di Desktop, Downloads, atau server lab).
+- Pastikan folder tersebut lengkap dengan semua file dan subfolder di dalamnya.
+
+### 2. Copy Folder Adobe Animate CC
+
+- Klik kanan pada folder **Adobe Animate CC**, lalu pilih **Copy** (atau tekan `Ctrl + C`).
+
+:::tip
+
+Transfer Antar Komputer Jika Anda perlu memindahkan folder dari PC lab ke laptop pribadi: - Gunakan flashdisk dengan kapasitas cukup (Adobe Animate CC biasanya berukuran 1-3 GB) - Atau gunakan jaringan lokal untuk transfer lebih cepat - Atau copy dari server lab jika tersedia
+:::
+
+### 3. Masuk ke Program Files
+
+- Buka **File Explorer** dan navigasi ke:
+  ```
+  C:\Program Files
+  ```
+- Jika folder **Adobe** sudah ada, buka folder tersebut. Jika belum ada, Anda bisa langsung paste di `Program Files` atau membuat folder **Adobe** terlebih dahulu untuk menjaga struktur yang rapi.
+
+### 4. Paste Folder Adobe Animate CC
+
+- Di dalam folder **Adobe** (atau langsung di `Program Files`), klik kanan lalu pilih **Paste** (atau tekan `Ctrl + V`).
+- Jika muncul dialog **Administrator permission**, klik **Continue** atau **Yes**.
+- Tunggu proses penyalinan selesai (mungkin memakan waktu beberapa menit tergantung ukuran folder dan kecepatan storage).
+
+Setelah selesai, folder Adobe Animate CC kini berada di:
+```
+C:\Program Files\Adobe\Adobe Animate CC
+```
+
+---
+
+## Tahap 2: Menjalankan Aplikasi
+
+Setelah folder disalin, saatnya menjalankan Adobe Animate CC.
+
+### 1. Cari File Executable
+
+- Masuk ke folder instalasi Adobe Animate CC:
+  ```
+  C:\Program Files\Adobe\Adobe Animate CC
+  ```
+- Cari file executable utama, biasanya bernama **Animate.exe** atau **Adobe Animate.exe**.
+
+### 2. Jalankan File .exe
+
+- Klik dua kali pada file **Animate.exe** untuk membuka aplikasi.
+- Tunggu beberapa saat hingga aplikasi terbuka.
+
+---
+
+## Tahap 3: Mengatasi Error Missing DLL
+
+Karena Adobe Animate CC adalah versi portable, ada kemungkinan beberapa file library (DLL) yang diperlukan tidak tersedia di komputer tujuan. Jika muncul error, ikuti langkah berikut untuk memperbaikinya.
+
+### Contoh Error yang Sering Muncul
+
+Ketika menjalankan Animate.exe, Anda mungkin melihat pesan error seperti:
+- **"MSVCR120.dll is missing"**
+- **"MSVCP140.dll was not found"**
+- **"VCRUNTIME140.dll is missing from your computer"**
+
+Error ini terjadi karena komputer belum memiliki Visual C++ Runtime yang dibutuhkan oleh Adobe Animate CC.
+
+### Solusi 1: Copy DLL dari Komputer Lain
+
+Jika ada komputer lain yang sudah bisa menjalankan Adobe Animate CC dengan normal, Anda bisa copy file DLL yang diperlukan.
+
+#### 1. Cari File DLL di Komputer yang Berfungsi
+
+- Di komputer yang sudah bisa menjalankan Adobe Animate CC, buka:
+  ```
+  C:\Windows\System32
+  ```
+- Cari file DLL yang diminta oleh error (misalnya **MSVCR120.dll** atau **MSVCP140.dll**).
+- Klik kanan pada file tersebut, lalu pilih **Copy**.
+
+:::info
+
+Lokasi File DLL File DLL biasanya berada di folder: - `C:\Windows\System32` (untuk sistem 64-bit) - `C:\Windows\SysWOW64` (untuk aplikasi 32-bit di sistem 64-bit) Jika tidak ketemu di System32, coba cari di SysWOW64.
+:::
+
+#### 2. Paste File DLL ke Komputer Tujuan
+
+- Di komputer yang mengalami error, buka:
+  ```
+  C:\Windows\System32
+  ```
+- Klik kanan di area kosong, lalu pilih **Paste**.
+- Jika muncul permintaan Administrator, klik **Continue** atau **Yes**.
+
+#### 3. Restart dan Coba Lagi
+
+- Setelah file DLL berhasil disalin, coba jalankan kembali **Animate.exe**.
+- Jika masih muncul error DLL yang berbeda, ulangi langkah di atas untuk file DLL yang baru diminta.
+
+### Solusi 2: Install Visual C++ Redistributable
+
+Cara yang lebih proper adalah menginstal Microsoft Visual C++ Redistributable yang menyediakan semua file DLL yang diperlukan.
+
+1. Buka browser dan cari **"Microsoft Visual C++ Redistributable download"**.
+2. Download versi yang sesuai:
+   - **Visual C++ 2013 Redistributable** (untuk MSVCR120.dll)
+   - **Visual C++ 2015-2022 Redistributable** (untuk MSVCP140.dll, VCRUNTIME140.dll)
+3. Instal file yang sudah didownload.
+4. Restart komputer.
+5. Coba jalankan kembali Adobe Animate CC.
+
+---
+
+## Tahap 4: Pin to Start Menu
+
+Agar Adobe Animate CC lebih mudah diakses, tambahkan shortcut ke menu Start Windows.
+
+### 1. Pin Aplikasi ke Start
+
+- Klik kanan pada file **Animate.exe**.
+- Pilih **Pin to Start** untuk menambahkan ikon ke menu Start Windows 10/11.
+
+### 2. Atau Buat Shortcut di Desktop
+
+- Klik kanan pada file **Animate.exe**.
+- Pilih **Send to → Desktop (create shortcut)**.
+- Shortcut akan muncul di Desktop untuk akses cepat.
+
+Setelah di-pin, Anda dapat membuka Adobe Animate CC langsung dari menu Start tanpa perlu mencari lokasi file setiap kali.
+
+---
+
+## Tips Penggunaan Adobe Animate CC
+
+Berikut beberapa tips untuk memaksimalkan penggunaan Adobe Animate CC:
+
+### 1. Simpan Project di Lokasi Terpisah
+
+- Jangan menyimpan project animasi di dalam folder Adobe Animate CC.
+- Buat folder khusus untuk menyimpan project, misalnya di `Documents\Animate Projects`.
+
+### 2. Export dalam Format yang Tepat
+
+Adobe Animate CC mendukung berbagai format export:
+- **HTML5 Canvas** - Format web modern yang kompatibel dengan semua browser
+- **WebGL** - Untuk animasi dengan performa tinggi
+- **Video (MP4)** - Untuk membuat video animasi
+- **GIF Animasi** - Untuk animasi sederhana
+- **SVG** - Format vector yang scalable
+
+### 3. Gunakan Template Bawaan
+
+Adobe Animate CC menyediakan banyak template siap pakai untuk mempercepat pembuatan animasi. Akses template melalui **File → New** dan pilih template yang sesuai.
+
+### 4. Backup Project Secara Berkala
+
+Animasi adalah file yang kompleks dan rentan corrupt. Selalu lakukan backup project secara berkala, terutama sebelum melakukan perubahan besar.
+
+---
+
+## Troubleshooting Umum
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Aplikasi tidak bisa dibuka | File corrupt atau tidak lengkap | Copy ulang folder Adobe Animate CC dari sumber yang valid |
+| Error "Missing DLL" | Visual C++ Runtime belum terinstal | Copy file DLL dari komputer lain atau install Visual C++ Redistributable |
+| Aplikasi crash saat membuka file | File project corrupt atau versi tidak kompatibel | Coba buka file di komputer lain atau restore dari backup |
+| Tidak bisa export animasi | Codec video tidak tersedia | Install codec pack seperti K-Lite Codec Pack |
+| Performance lambat | Spesifikasi komputer tidak cukup | Tutup aplikasi lain, kurangi layer animasi, atau gunakan komputer dengan spek lebih tinggi |
+
+---
+
+## Perbedaan Adobe Animate CC dengan Flash CS3
+
+| Aspek | Adobe Flash CS3 | Adobe Animate CC |
+|---|---|---|
+| **Output Format** | Hanya SWF (Flash) | HTML5 Canvas, WebGL, Video, SVG |
+| **Browser Support** | Butuh Flash Player (sudah discontinue) | Native browser support (HTML5) |
+| **Fitur** | Dasar untuk animasi 2D | Advanced dengan dukungan scripting modern |
+| **Ukuran File** | Lebih kecil | Lebih besar, lebih banyak fitur |
+| **Cocok untuk** | Pembelajaran dasar | Produksi profesional |
+
+---
+
+> **Catatan untuk Asisten Laboratorium:**
+> Pastikan Adobe Animate CC sudah tersedia di semua komputer lab dan semua file DLL yang diperlukan sudah terinstal (Visual C++ Redistributable). Backup folder Adobe Animate CC di server lab agar mudah didistribusikan. Siapkan juga tutorial singkat tentang cara export ke HTML5 Canvas karena format SWF Flash sudah tidak didukung browser modern.
+
+---
+
+**Selesai!** Adobe Animate CC kini siap digunakan untuk praktikum desain animasi dan multimedia interaktif di laboratorium.

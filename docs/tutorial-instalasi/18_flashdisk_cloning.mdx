@@ -1,0 +1,210 @@
+---
+sidebar_position: 18
+---
+
+# Cara Membuat Flashdisk Cloning dengan Ventoy dan Acronis
+
+Flashdisk cloning adalah flashdisk yang berisi tools untuk membuat backup atau clone seluruh hard disk komputer. Tools ini sangat berguna untuk teknisi lab, backup sistem, atau recovery ketika komputer bermasalah. Panduan ini akan membantu Anda membuat flashdisk multi-boot dengan Ventoy dan menambahkan Acronis True Image untuk cloning disk.
+
+:::info
+
+Kegunaan - **Ventoy** - Tool untuk membuat flashdisk multi-boot yang bisa menampung banyak file ISO - **Acronis True Image** - Software untuk backup, restore, dan cloning hard disk
+:::
+
+---
+
+## Tahap 1: Download Ventoy
+
+### 1. Cari di Google
+
+- Buka browser (Chrome, Firefox, Edge, dll.)
+- Ketik di Google: **ventoy download**
+- Atau langsung akses: [ventoy.net](https://www.ventoy.net/)
+
+### 2. Ambil Versi ZIP (Windows)
+
+- Di halaman download Ventoy, cari bagian **Download**
+- Pilih versi **Windows** dengan format **ZIP** (misalnya: `ventoy-1.0.xx-windows.zip`)
+- Klik link download dan tunggu hingga selesai
+- File akan tersimpan di folder Downloads
+
+:::tip
+
+Kenapa ZIP? Versi ZIP adalah versi portable yang tidak perlu instalasi. Cukup extract dan langsung bisa digunakan.
+:::
+
+---
+
+## Tahap 2: Install Ventoy ke Flashdisk
+
+### 1. Extract File Ventoy
+
+- Buka folder **Downloads**
+- Cari file **ventoy-x.x.xx-windows.zip**
+- Klik kanan → **Extract Here** atau **Extract All**
+- Buka folder hasil ekstraksi
+
+### 2. Siapkan Flashdisk
+
+- Masukkan **flashdisk kosong** minimal 8 GB ke port USB komputer
+- Backup semua data penting dari flashdisk karena akan dihapus
+
+:::warning
+
+Data Akan Dihapus Proses instalasi Ventoy akan menghapus semua data di flashdisk. Pastikan sudah backup terlebih dahulu.
+:::
+
+### 3. Jalankan Ventoy2Disk.exe
+
+- Di dalam folder Ventoy yang sudah diekstrak, cari file **Ventoy2Disk.exe**
+- Klik dua kali untuk menjalankan
+- Jika muncul **User Account Control**, klik **Yes**
+
+### 4. Pilih Device dan Install
+
+- Di jendela Ventoy, bagian **Device** akan menampilkan flashdisk yang terpasang
+- Pastikan memilih flashdisk yang benar (cek kapasitas dan drive letter)
+- Klik tombol **Install** (tombol hijau besar)
+- Konfirmasi dengan klik **Yes** pada dialog warning
+- Tunggu proses instalasi selesai (biasanya hanya 10-30 detik)
+- Setelah selesai, klik **OK**
+
+Flashdisk kini sudah ter-install Ventoy dan siap menampung file ISO!
+
+---
+
+## Tahap 3: Download Acronis True Image ISO
+
+### 1. Akses Website Kuyhaa
+
+- Buka browser
+- Ketik di address bar: **kuyhaa.me/acronis-true-image-terbaru-full.html**
+- Atau cari di Google: **acronis true image kuyhaa**
+- Buka website kuyhaa.me
+
+:::info
+
+Kuyhaa Kuyhaa adalah website yang menyediakan link download software full version termasuk Acronis True Image dalam format ISO bootable.
+:::
+
+### 2. Scroll ke Bawah untuk Link Download
+
+- Di halaman Acronis True Image, scroll ke bawah hingga menemukan bagian **Download**
+- Biasanya ada beberapa link mirror (Google Drive, MediaFire, dll.)
+- Pilih salah satu link download
+- Klik link tersebut untuk mulai download
+
+### 3. Download File ISO
+
+- Tunggu hingga download selesai
+- File yang didownload biasanya bernama **Acronis.True.Image.xxx.iso** atau sejenisnya
+- File akan tersimpan di folder Downloads
+
+:::tip
+
+Ukuran File File ISO Acronis biasanya berukuran 500 MB - 1 GB. Pastikan koneksi internet stabil saat download.
+:::
+
+---
+
+## Tahap 4: Masukkan ISO ke Ventoy Flashdisk
+
+### 1. Buka Flashdisk Ventoy
+
+- Buka **File Explorer** (`Windows + E`)
+- Cari drive flashdisk yang sudah ter-install Ventoy (biasanya nama drive berubah menjadi "Ventoy")
+- Buka drive tersebut
+
+### 2. Copy File ISO Acronis
+
+- Buka folder **Downloads** di window lain
+- Cari file **Acronis.True.Image.xxx.iso** yang sudah didownload
+- **Copy** file ISO tersebut (klik kanan → Copy, atau `Ctrl + C`)
+- Kembali ke window flashdisk Ventoy
+- **Paste** file ISO langsung ke root folder flashdisk Ventoy (`Ctrl + V`)
+- Tunggu proses copy selesai
+
+### 3. (Opsional) Tambahkan ISO Lain
+
+Ventoy bisa menampung banyak file ISO sekaligus. Anda bisa menambahkan:
+- Windows 10/11 ISO untuk instalasi
+- Linux ISO (Ubuntu, Debian, dll.)
+- Tool lain seperti Hiren's Boot CD, GParted, dll.
+
+Cukup copy semua file ISO ke dalam flashdisk Ventoy.
+
+---
+
+## Tahap 5: Menggunakan Flashdisk Cloning
+
+### Boot dari Ventoy
+
+1. Masukkan flashdisk Ventoy ke komputer yang akan di-clone/backup
+2. Restart komputer
+3. Tekan **F12** (atau F9/F8/Esc tergantung merk) untuk masuk Boot Menu
+4. Pilih **USB drive** dari menu boot
+5. Ventoy akan menampilkan menu dengan daftar semua ISO yang ada
+6. Pilih **Acronis True Image ISO** menggunakan tombol panah
+7. Tekan **Enter** untuk boot
+
+### Menggunakan Acronis True Image
+
+Setelah boot ke Acronis True Image:
+- Pilih **Disk Clone** untuk meng-clone seluruh disk
+- Pilih **Backup** untuk membuat backup disk
+- Pilih **Restore** untuk mengembalikan backup
+- Ikuti wizard yang tersedia
+
+---
+
+## Keuntungan Menggunakan Ventoy
+
+| Keuntungan | Penjelasan |
+|---|---|
+| **Multi-boot** | Satu flashdisk bisa menampung banyak ISO (Windows, Linux, Tools) |
+| **No need to reformat** | Tambah/hapus ISO tanpa perlu format ulang flashdisk |
+| **Fast** | Cukup copy-paste ISO, tidak perlu burning atau setup rumit |
+| **Flexible** | Bisa campurkan ISO Windows, Linux, rescue disk, dll dalam satu flashdisk |
+
+---
+
+## Tips Penting
+
+### 1. Beri Label Flashdisk
+
+Beri nama flashdisk yang jelas, misalnya "Ventoy Multi-Boot" atau "Rescue Disk" agar mudah diidentifikasi.
+
+### 2. Simpan Tools Penting
+
+Selain Acronis, pertimbangkan menambahkan:
+- **Hiren's Boot CD PE** - Tool all-in-one untuk recovery
+- **GParted Live** - Partisi manager
+- **Windows PE** - Environment minimal Windows untuk troubleshooting
+
+### 3. Update Ventoy Secara Berkala
+
+Ventoy sering update untuk mendukung ISO terbaru. Download versi terbaru dan jalankan **Update** (bukan Install) untuk upgrade tanpa hapus data.
+
+### 4. Backup File ISO
+
+Simpan file ISO Acronis dan ISO lainnya di hard disk atau cloud storage sebagai backup.
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Ventoy tidak bisa install | Flashdisk terproteksi atau rusak | Coba flashdisk lain atau format manual terlebih dahulu |
+| ISO tidak muncul di menu Ventoy | File ISO corrupt atau tidak compatible | Download ulang ISO dari sumber terpercaya |
+| Boot ke Ventoy gagal | Secure Boot enabled di BIOS | Disable Secure Boot di BIOS settings |
+| Acronis tidak bisa clone disk | Target disk terlalu kecil | Gunakan disk target yang lebih besar dari source |
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Siapkan flashdisk Ventoy yang berisi Acronis True Image, Windows ISO, dan tools recovery lainnya sebagai toolkit standar teknisi. Dengan satu flashdisk, teknisi bisa handle berbagai kasus: instalasi Windows, backup/restore, cloning, dan troubleshooting. Update tools secara berkala dan simpan backup file ISO di server lab.
+
+---
+
+**Selesai!** Flashdisk Ventoy multi-boot dengan Acronis True Image kini siap digunakan untuk cloning, backup, dan recovery sistem.

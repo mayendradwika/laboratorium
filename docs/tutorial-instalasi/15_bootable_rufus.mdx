@@ -1,0 +1,194 @@
+---
+sidebar_position: 15
+---
+
+# Cara Membuat Bootable USB dengan Rufus
+
+Bootable USB adalah flashdisk yang berisi file instalasi sistem operasi (Windows, Linux, dll.) yang dapat digunakan untuk menginstal atau memperbaiki komputer. Panduan ini akan membantu Anda membuat bootable USB menggunakan Rufus dengan memastikan kompatibilitas partisi yang tepat (MBR atau GPT).
+
+:::info
+
+Rufus Rufus adalah tool gratis dan ringan untuk membuat bootable USB. Tool ini sangat populer karena cepat, mudah digunakan, dan mendukung berbagai format ISO sistem operasi.
+:::
+
+---
+
+## Yang Anda Perlukan
+
+1. **Flashdisk kosong** minimal 8 GB (semua data akan dihapus)
+2. **File ISO** sistem operasi (Windows 10/11, Linux, dll.)
+3. **Rufus** - download gratis dari [rufus.ie](https://rufus.ie/)
+4. **Flashdisk kedua** yang berisi ISO dan Rufus (opsional, untuk transfer)
+
+---
+
+## Tahap 1: Cek Tipe Partisi Komputer Target
+
+Sebelum membuat bootable USB, penting untuk mengetahui tipe partisi komputer yang akan diinstal: **MBR** atau **GPT**. Ini menentukan pengaturan Rufus yang tepat.
+
+### 1. Buka Disk Management
+
+**Cara 1: Menggunakan Windows + X**
+- Tekan `Windows + X` pada keyboard
+- Pilih **Disk Management** dari menu
+
+**Cara 2: Menggunakan Run**
+- Tekan `Windows + R`
+- Ketik **diskmgmt.msc** lalu Enter
+
+### 2. Klik Disk 0 (Hard Disk Utama)
+
+- Di jendela Disk Management bagian bawah, Anda akan melihat **Disk 0** (hard disk utama komputer)
+- Klik kanan pada **Disk 0** (di area label "Disk 0", bukan pada partisi)
+- Pilih **Properties**
+
+### 3. Cek Tipe Partisi
+
+- Di jendela Properties, klik tab **Volumes**
+- Lihat baris **Partition style**, akan tertulis salah satu dari:
+  - **Master Boot Record (MBR)** - untuk BIOS atau UEFI Legacy
+  - **GUID Partition Table (GPT)** - untuk UEFI modern
+
+**Catat informasi ini** karena akan digunakan saat setting Rufus.
+
+:::info
+
+Perbedaan MBR dan GPT - **MBR** - Format lama, kompatibel dengan BIOS dan komputer lama (sebelum 2010) - **GPT** - Format modern, untuk UEFI, mendukung disk >2TB, lebih aman Kebanyakan komputer baru (sejak 2015) menggunakan GPT.
+:::
+
+---
+
+## Tahap 2: Persiapan Flashdisk dan File
+
+### 1. Siapkan Flashdisk Kosong
+
+- Masukkan **flashdisk kosong** yang akan dijadikan bootable USB ke port USB komputer
+- Pastikan tidak ada data penting di flashdisk ini karena akan dihapus
+
+:::warning
+
+Backup Data Semua data di flashdisk akan dihapus saat proses pembuatan bootable USB. Backup terlebih dahulu jika ada file penting.
+:::
+
+### 2. Siapkan File ISO dan Rufus
+
+Jika Anda punya flashdisk kedua yang berisi file ISO dan Rufus:
+- Masukkan flashdisk kedua
+- Copy file **ISO** dan **rufus.exe** ke Desktop atau folder mudah diakses
+
+Jika belum punya:
+- Download **Rufus** dari [rufus.ie](https://rufus.ie/) (pilih versi Portable)
+- Download atau siapkan file **ISO Windows/Linux** yang dibutuhkan
+
+---
+
+## Tahap 3: Menggunakan Rufus
+
+### 1. Jalankan Rufus
+
+- Buka folder tempat **rufus.exe** berada
+- Klik dua kali pada **rufus.exe**
+- Jika muncul dialog update, pilih **No** (skip update untuk mempercepat)
+
+### 2. Pilih Device (Flashdisk)
+
+- Di bagian **Device**, pilih flashdisk yang akan dijadikan bootable
+- Pastikan memilih flashdisk yang benar (cek kapasitas dan nama drive)
+
+### 3. Pilih File ISO (Boot Selection)
+
+- Di bagian **Boot selection**, klik tombol **SELECT**
+- Cari dan pilih file **ISO** sistem operasi yang sudah disiapkan
+- Klik **Open**
+
+### 4. Pilih Partition Scheme (PENTING!)
+
+Sesuaikan dengan tipe partisi yang sudah dicek di Tahap 1:
+
+**Jika komputer target menggunakan GPT:**
+- **Partition scheme:** Pilih **GPT**
+- **Target system:** Pilih **UEFI (non CSM)**
+
+**Jika komputer target menggunakan MBR:**
+- **Partition scheme:** Pilih **MBR**
+- **Target system:** Pilih **BIOS or UEFI**
+
+:::danger
+
+Harus Sesuai! Jika setting partisi tidak sesuai dengan komputer target, bootable USB tidak akan bisa digunakan untuk instalasi. Pastikan memilih yang tepat!
+:::
+
+### 5. Ubah Volume Label (Opsional)
+
+- Di bagian **Volume label**, Anda bisa mengubah nama flashdisk
+- Contoh: "Windows10", "Win11Install", "UbuntuLive", dll.
+- Ini hanya untuk memudahkan identifikasi, tidak wajib diubah
+
+### 6. Biarkan Setting Lain Default
+
+- **File system:** Biarkan FAT32 (otomatis) atau NTFS untuk file besar
+- **Cluster size:** Biarkan default
+- Setting lain tidak perlu diubah
+
+### 7. Klik START
+
+- Setelah semua setting sudah benar, klik tombol **START** di bagian bawah
+- Jika muncul warning **"All data will be destroyed"**, klik **OK** (karena sudah backup)
+- Jika muncul pilihan **ISO Image mode** atau **DD Image mode**, pilih **ISO Image mode** (lebih kompatibel)
+
+### 8. Tunggu Proses Selesai
+
+- Rufus akan mulai membuat bootable USB
+- Proses biasanya memakan waktu 5-20 menit tergantung ukuran ISO dan kecepatan flashdisk
+- Tunggu hingga status bar di bawah menunjukkan **READY**
+
+### 9. Selesai
+
+- Setelah status **READY** muncul, bootable USB sudah siap digunakan
+- Klik **CLOSE** untuk menutup Rufus
+- **Jangan langsung cabut flashdisk**, klik **Safely Remove Hardware** terlebih dahulu
+
+---
+
+## Tahap 4: Menggunakan Bootable USB
+
+Setelah bootable USB selesai dibuat, Anda bisa menggunakannya untuk:
+
+### Instalasi Windows/Linux
+
+1. Masukkan bootable USB ke komputer target
+2. Restart komputer
+3. Tekan tombol Boot Menu (F12, F9, F8, atau Esc - tergantung merk)
+4. Pilih USB drive dari menu boot
+5. Ikuti proses instalasi sistem operasi
+
+---
+
+## Troubleshooting
+
+| Masalah | Penyebab | Solusi |
+|---|---|---|
+| Komputer tidak detect bootable USB | Partition scheme salah | Buat ulang dengan setting MBR/GPT yang sesuai |
+| Error "Boot failure" saat boot | Setting BIOS tidak cocok | Ubah BIOS dari Legacy ke UEFI atau sebaliknya |
+| Rufus error saat proses | Flashdisk rusak atau file ISO corrupt | Ganti flashdisk atau download ulang ISO |
+| Proses sangat lambat | Flashdisk USB 2.0 atau terlalu tua | Gunakan flashdisk USB 3.0 untuk lebih cepat |
+| Tidak bisa boot di komputer lama | GPT tidak support di BIOS lama | Buat ulang dengan MBR untuk komputer lama |
+
+---
+
+## Tips Penting
+
+1. **Gunakan flashdisk USB 3.0** untuk kecepatan maksimal
+2. **Simpan file ISO** untuk membuat bootable ulang jika diperlukan
+3. **Label flashdisk** dengan jelas agar tidak tertukar
+4. **Jangan cabut flashdisk** saat proses berjalan (bisa merusak flashdisk)
+5. **Test bootable USB** di komputer target sebelum digunakan untuk produksi
+
+---
+
+> **Catatan untuk Teknisi Lab:**
+> Siapkan bootable USB untuk Windows 10 dan 11 dengan kedua format (MBR dan GPT) agar siap untuk semua jenis komputer. Simpan file ISO di server lab untuk memudahkan pembuatan bootable USB baru. Buat label fisik di flashdisk untuk membedakan versi OS dan tipe partisi.
+
+---
+
+**Selesai!** Bootable USB kini siap digunakan untuk instalasi atau perbaikan sistem operasi.
